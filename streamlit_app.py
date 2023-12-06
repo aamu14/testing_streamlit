@@ -38,7 +38,7 @@ distance
 
 data = pd.read_csv("https://raw.githubusercontent.com/aamu14/testing_streamlit/main/datatest.csv")
 
-st.dataframe(data, hide_index=True)
+st.dataframe(data)
 
 
     #st.code(code1, language='r')
