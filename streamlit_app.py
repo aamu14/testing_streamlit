@@ -14,7 +14,6 @@ R packages used:
 - `readxl`
 - `cluster`
 - `factoextra`
-- `clusterSim`
 - `fpc`
 ''')
 
@@ -23,7 +22,6 @@ with st.expander('See code'):
     code1 = '''library(readxl)
 library(cluster)
 library(factoextra)
-library(clusterSim)
 library(fpc)
 
 # Read the data file
