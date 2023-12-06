@@ -1,7 +1,6 @@
 library(readxl)
 library(cluster)
 library(factoextra)
-library(clusterSim)
 library(fpc)
 
 # Read the data file
