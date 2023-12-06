@@ -20,14 +20,22 @@ R packages used:
 
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
-    code3 = '''library(readxl)
-    library(cluster)
-    library(factoextra)
-    library(clusterSim)
-    library(fpc)
+    code1 = '''library(readxl)
+library(cluster)
+library(factoextra)
+library(clusterSim)
+library(fpc)
+
+# Read the data file
+Data_Per_Kecamatan_Bandar_Lampung <- read_excel("datatest.xlsx")
+
+# Scale the data
+z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
+
+# Calculate Euclidean distance
+distance <- dist(z)
+distance
     '''
     st.code(code1, language='r')
-
-st.code(code3, language='R')
-process3 = subprocess.Popen(["Rscript", "lipinski.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-result3 = process3.communicate())
+process1 = subprocess.Popen(["Rscript", "lipinski.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+result1 = process1.communicate())
