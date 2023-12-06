@@ -1,0 +1,15 @@
+﻿Variabel,Minimum,Q1,Median,Q3,Rata-rata,Maksimum
+Luas Daerah (km^2),2,4.3,8.1,14.8,9.9,24.2
+Kepadatan Penduduk per km^2,3336,4508,7070,12523,8758,22018
+Tingkat TK/RA,8,12.5,19.5,24.3,20.05,47
+Tingkat SD/MI,7,13,15.5,17,15.2,22
+Tingkat SMP/MTs,3,4.8,9,10.3,8.4,14
+Tingkat SMA/MA/SMK,1,4.8,6.5,10.3,7.2,14
+Murid Tingkat TK/RA,308,661,885,1091.5,923.5,1915
+Murid Tingkat SD/MI,2548,4364,5186,6443,5314,8198
+Murid Tingkat SMP/MTs,345,1498,2129,3402,2577,5544
+Murid Tingkat SMA/MA/SMK,315,1086,1871,4084,2705,6779
+Guru Tingkat TK/RA,36,76,116.5,128.2,110.8,261
+Guru Tingkat SD/MI,152,235.2,309.5,372.2,305.2,452
+Guru Tingkat SMP/MTs,45,124,166,241.2,188.4,394
+Guru Tingkat SMA/MA/SMK,33,89.3,133,282,189.1,494
