@@ -1,6 +1,7 @@
 import streamlit as st
 import subprocess
-
+import pandas as pd
+import openpyxl
 st.header('🎈 R x Python Streamlit App')
 
 st.sidebar.markdown('''
@@ -34,7 +35,8 @@ distance <- dist(z)
 distance
     '''
 
-import pandas as pd
+
+
 
 # Read the Excel file into a DataFrame
 file_path = 'datatest.xlsx'
