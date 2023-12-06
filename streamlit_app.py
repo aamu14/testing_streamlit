@@ -34,19 +34,11 @@ z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
 distance <- dist(z)
 distance
     '''
-
-
-
-
 # Read the Excel file into a DataFrame
 
-df = pd.read_csv("https://raw.githubusercontent.com/aamu14/testing_streamlit/main/datatest.csv")
+data = pd.read_csv("https://raw.githubusercontent.com/aamu14/testing_streamlit/main/datatest.csv")
 
-# Display summary statistics
-summary = df.describe()
-
-st.dataframe(df, hide_index=True)
-st.write(summary)
+st.dataframe(data, hide_index=True)
 
 
     #st.code(code1, language='r')
