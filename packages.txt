@@ -4,8 +4,4 @@ r-cran-readxl
 r-cran-cluster
 r-cran-factoextra
 r-cran-fpc
-r-cran-clusterSim
 r-cran-knitr
-matplotlib
-pandas
-PIL
