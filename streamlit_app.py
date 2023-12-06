@@ -18,7 +18,6 @@ R packages used:
 ''')
 
 # Read the Excel file into a DataFrame
-st.set_page_config(layout="wide")
 data = pd.read_csv("datatest.csv")
 st.dataframe(data)
 
