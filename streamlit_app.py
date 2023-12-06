@@ -2,7 +2,6 @@ import streamlit as st
 import subprocess
 import pandas as pd
 import matplotlib.pyplot as plt
-from PIL import Image
 
 st.header('🎈 R x Python Streamlit App')
 
