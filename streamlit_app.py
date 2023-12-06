@@ -39,8 +39,8 @@ distance
 
 
 # Read the Excel file into a DataFrame
-file_path = 'datatest.xlsx'
-df = pd.read_excel(file_path)
+
+df = pd.read_csv("https://raw.githubusercontent.com/aamu14/testing_streamlit/main/datatest.csv")
 
 # Display summary statistics
 summary = df.describe()
