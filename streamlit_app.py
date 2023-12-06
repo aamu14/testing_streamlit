@@ -19,7 +19,7 @@ R packages used:
 
 # Read the Excel file into a DataFrame
 data = pd.read_csv("datatest.csv")
-st.dataframe(data)
+st.dataframe(data, hide_index=True)
 
 
 st.subheader('1. Printing text in R')
