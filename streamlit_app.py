@@ -18,7 +18,7 @@ R packages used:
 ''')
 
 st.markdown("""
-            **Data yang digunakan adalah data kecamatan, data luas daerah, dan data kependidikan yang terdiri dari:**  
+            **Dataset yang digunakan terdiri dari data kecamatan, data luas daerah, dan data kependidikan yang terbagi menjadi 3, yaitu:**  
             1. Jumlah Guru Tingkat TK hingga SMA sederajat
             2. Jumlah Murid Tingkat TK hingga SMA sederajat
             3. Jumlah Sekolah Tingkat TK hinga SMA sederajat
@@ -28,6 +28,11 @@ st.markdown("""
 data = pd.read_csv("datatest.csv")
 st.dataframe(data, height=300)
 
+st.markdown("""
+            **Berikut adalah statistika deskripsi dari dataset yang digunakan:**  
+            """)
+data_summary =pd.read.csv("summary.csv")
+st.dataframe(data_summary, height=300)
 
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
