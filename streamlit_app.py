@@ -31,7 +31,7 @@ st.dataframe(data, height=300)
 st.markdown("""
             **Berikut adalah statistika deskripsi dari dataset yang digunakan:**  
             """)
-data_summary =pd.read.csv("summary.csv")
+data_summary =pd.read_csv("summary.csv")
 st.dataframe(data_summary, height=300)
 
 st.subheader('1. Printing text in R')
