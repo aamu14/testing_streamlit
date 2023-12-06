@@ -20,7 +20,7 @@ R packages used:
 
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
-    code1 = '''library(readxl)
+    code3 = '''library(readxl)
     library(cluster)
     library(factoextra)
     library(clusterSim)
@@ -28,12 +28,6 @@ with st.expander('See code'):
     '''
     st.code(code1, language='r')
 
-# Adjust the path to your R script file
-process1 = subprocess.Popen(["Rscript", "testing.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-stdout, stderr = process1.communicate()
-
-if stderr:
-    st.error(f"Error: {stderr.decode()}")
-else:
-    st.write("Output:")
-    st.code(stdout.decode(), language='r')
+st.code(code3, language='R')
+process3 = subprocess.Popen(["Rscript", "lipinski.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+result3 = process3.communicate())
