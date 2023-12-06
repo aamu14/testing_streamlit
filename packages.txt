@@ -4,3 +4,4 @@ r-cran-readxl
 r-cran-cluster
 r-cran-factoextra
 r-cran-fpc
+r-cran-clusterSim
