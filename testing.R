@@ -5,7 +5,7 @@ library(clusterSim)
 library(fpc)
 
 # Read the data file
-Data_Per_Kecamatan_Bandar_Lampung <- read_excel("D:\testing streamlit\datatest.xlsx")
+Data_Per_Kecamatan_Bandar_Lampung <- read_excel("datatest.xlsx")
 
 # Scale the data
 z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
