@@ -5,9 +5,7 @@ st.header('🎈 R x Python Streamlit App')
 
 st.sidebar.markdown('''
 # About
-This demo shows the use of R in a Streamlit App by showcasing 3 example use cases.
-
-The R code for all 3 examples is rendered on-the-fly in this app.
+Testing R di Streamlit
 
 R packages used:
 
