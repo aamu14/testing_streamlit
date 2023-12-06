@@ -13,6 +13,7 @@ R packages used:
 - `cluster`
 - `factoextra`
 - `fpc`
+- `clusterSim`
 ''')
 
 st.subheader('1. Printing text in R')
