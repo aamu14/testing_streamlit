@@ -2,7 +2,6 @@ library(readxl)
 library(cluster)
 library(factoextra)
 library(fpc)
-library(clusterSim)
 
 # Load the openxlsx package
 library(openxlsx)
