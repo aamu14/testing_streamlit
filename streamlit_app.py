@@ -62,8 +62,8 @@ for bar in bars:
 plt.tight_layout()
 # Saving the histogram as an image
 plt.savefig('graph_1.png')  # Save the image as 'graph_1.png'
-# Displaying the histogram
-plt.show()
+# Displaying the saved image in Streamlit
+st.image('graph_1.png')
 
 
 st.subheader('1. Printing text in R')
