@@ -33,7 +33,21 @@ z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
 distance <- dist(z)
 distance
     '''
-    st.code(code1, language='r')
-process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-result1 = process1.communicate()
-st.dataframe(result1, hide_index=True)
+
+import pandas as pd
+
+# Read the Excel file into a DataFrame
+file_path = 'datatest.xlsx'
+df = pd.read_excel(file_path)
+
+# Display summary statistics
+summary = df.describe()
+
+st.dataframe(df, hide_index=True)
+st.write(summary)
+
+
+    #st.code(code1, language='r')
+#process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+#result1 = process1.communicate()
+#st.dataframe(result1, hide_index=True)
