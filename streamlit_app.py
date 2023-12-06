@@ -26,6 +26,7 @@ st.markdown("""
 
 # Read the Excel file into a DataFrame
 data = pd.read_csv("datatest.csv")
+data = data.Value.round(2)
 st.dataframe(data, height=300)
 
 
