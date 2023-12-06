@@ -7,5 +7,5 @@ r-cran-fpc
 r-cran-clusterSim
 r-cran-knitr
 pandas
-matplotlib.pyplo
+matplotlib
 PIL
