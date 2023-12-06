@@ -6,6 +6,3 @@ r-cran-factoextra
 r-cran-fpc
 r-cran-clusterSim
 r-cran-knitr
-pandas
-matplotlib
-PIL
