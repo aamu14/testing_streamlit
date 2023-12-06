@@ -8,4 +8,4 @@ library(knitr)
 library(openxlsx)
 # Read the data file
 df <- read_excel("datatest.xlsx")
-df <- as.data.frame(df[,-1])
+df <- df[,-1]
