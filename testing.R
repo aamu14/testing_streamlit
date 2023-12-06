@@ -2,6 +2,7 @@ library(readxl)
 library(cluster)
 library(factoextra)
 library(fpc)
+library(clusterSim)
 
 # Read the data file
 Data_Per_Kecamatan_Bandar_Lampung <- read_excel("datatest.xlsx")
