@@ -17,6 +17,13 @@ R packages used:
 - `clusterSim`
 ''')
 
+st.markdown("""
+            **Data yang digunakan adalah data kecamatan, data luas daerah, dan data kependidikan yang terdiri dari:**  
+            1. Jumlah Guru Tingkat TK hingga SMA sederajat
+            2. Jumlah Murid Tingkat TK hingga SMA sederajat
+            3. Jumlah Sekolah Tingkat TK hinga SMA sederajat
+            """)
+
 # Read the Excel file into a DataFrame
 data = pd.read_csv("datatest.csv")
 st.dataframe(data, height=300)
