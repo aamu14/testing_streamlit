@@ -17,6 +17,12 @@ R packages used:
 - `clusterSim`
 ''')
 
+# Read the Excel file into a DataFrame
+st.set_page_config(layout="wide")
+data = pd.read_csv("datatest.csv")
+st.dataframe(data)
+
+
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
     code1 = '''library(readxl)
@@ -34,11 +40,8 @@ z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
 distance <- dist(z)
 distance
     '''
-# Read the Excel file into a DataFrame
 
-data = pd.read_csv("https://raw.githubusercontent.com/aamu14/testing_streamlit/main/datatest.csv")
 
-st.dataframe(data)
 
 
     #st.code(code1, language='r')
