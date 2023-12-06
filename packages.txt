@@ -8,3 +8,4 @@ r-cran-clusterSim
 r-cran-knitr
 pandas
 matplotlib.pyplo
+PIL
