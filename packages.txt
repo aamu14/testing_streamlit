@@ -1,0 +1,7 @@
+r-base
+r-base-dev
+r-cran-readxl
+r-cran-cluster
+r-cran-factoextra
+r-cran-clusterSim
+r-cran-fpc
