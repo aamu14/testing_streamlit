@@ -5,3 +5,4 @@ r-cran-cluster
 r-cran-factoextra
 r-cran-fpc
 r-cran-knitr
+r-cran-clValid
