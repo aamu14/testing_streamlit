@@ -207,7 +207,24 @@ st.markdown("""---""")
  #Header 2
 
 st.header('Observasi Jumlah Sekolah, Jumlah Guru, dan Jumlah Murid')
+col5, col6 = st.columns(2)
+# Displaying the saved image in Streamlit
+with col5:
+   st.header('Untuk Sekolah Tingkat TK/RA')
+   st.image("fig5.png")
 
+with col6:
+   st.header("Untuk Tingkat SD/MI")
+   st.image("fig6.png")
+    
+col7, col8 = st.columns(2)
+with col7:
+   st.header("Untuk Tingkat SMP/MTs")
+   st.image("fig7.png")
+
+with col8:
+   st.header("Untuk Tingkat SMA/SMK/MA")
+   st.image("fig8.png")
 
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
