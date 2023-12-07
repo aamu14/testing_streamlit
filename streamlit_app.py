@@ -53,7 +53,6 @@ st.header('Obsevasi Data Kredit dan PDRB')
 tab1, tab2 = st.tabs(['Data Jumlah Pemberian Kredit',
                       'Data Pertumbuhan PDRB'])
 with tabl1:
-           
            # Creating a histogram using Matplotlib
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
            bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat TK/RA'])
@@ -72,6 +71,29 @@ with tabl1:
            plt.savefig('graph_1.png')  # Save the image as 'graph_1.png'
            # Displaying the saved image in Streamlit
            st.image('graph_1.png')
+
+
+with tab2:
+     # Creating a histogram using Matplotlib
+           plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Kepadatan Penduduk per km^2'])
+           plt.xlabel('Kecamatan')
+           plt.ylabel('Kepadatan Penduduk per km^2')
+           plt.title('Histogram of Kepadatan Penduduk per km^2 by Kecamatan')
+           plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
+
+           # Adding values on top of the bars
+           for bar in bars:
+               yval = bar.get_height()
+               plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
+
+           plt.tight_layout()
+           # Saving the histogram as an image
+           plt.savefig('graph_2.png')  # Save the image as 'graph_1.png'
+           # Displaying the saved image in Streamlit
+           st.image('graph_3.png')
+
+
 
 
 st.subheader('1. Printing text in R')
