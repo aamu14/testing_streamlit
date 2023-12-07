@@ -175,7 +175,7 @@ with tab6:
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
            bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat SMA/MA/SMK'])
            plt.xlabel('Kecamatan')
-           plt.ylabel('Tingkat SMA/MA/SMK)
+           plt.ylabel('Tingkat SMA/MA/SMK')
            plt.title('Histogram of Tingkat SMA/MA/SMK by Kecamatan')
            plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
            
