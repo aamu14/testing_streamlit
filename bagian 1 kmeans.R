@@ -41,35 +41,23 @@ sk7 <-silhouette(clusterCut_7$cluster,distance)
 sk8 <-silhouette(clusterCut_8$cluster,distance)
 sk9 <-silhouette(clusterCut_9$cluster,distance)
 
-# Open PNG devices to save the plots
-png("sk2_plot.png")
-plot(sk2)
-dev.off()
+# Extracting average silhouette width values
+avg_width_sk2 <- sk2$avg.width
+avg_width_sk3 <- sk3$avg.width
+avg_width_sk4 <- sk4$avg.width
+avg_width_sk5 <- sk5$avg.width
+# Extracting average silhouette width values
+avg_width_sk6 <- sk6$avg.width
+avg_width_sk7 <- sk7$avg.width
+avg_width_sk8 <- sk8$avg.width
+avg_width_sk9 <- sk9$avg.width
 
-png("sk3_plot.png")
-plot(sk3)
-dev.off()
+# Extracting average silhouette width values
+avg_widths <- data.frame(
+  Method = c("Complete", "Complete", "Complete", "Complete", "K-Means", "K-Means", "K-Means", "K-Means"),
+  Cluster = c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"),
+  Average_Silhouette_Width = c(sk2$avg.width, sk3$avg.width, sk4$avg.width, sk5$avg.width, sk6$avg.width,sk7$avg.width, sk8$avg.width, sk9$avg.width)
+)
 
-png("sk4_plot.png")
-plot(sk4)
-dev.off()
-
-png("sk5_plot.png")
-plot(sk5)
-dev.off()
-
-png("sk6_plot.png")
-plot(sk6)
-dev.off()
-
-png("sk7_plot.png")
-plot(sk7)
-dev.off()
-
-png("sk8_plot.png")
-plot(sk8)
-dev.off()
-
-png("sk9_plot.png")
-plot(sk9)
-dev.off()
+# Saving the dataframe into a CSV file named 'silhouette.csv'
+write.csv(avg_widths, file = "silhouette.csv", row.names = FALSE)
