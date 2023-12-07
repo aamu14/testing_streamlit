@@ -79,7 +79,7 @@ with tab1:
            plt.savefig('graph_1.png')  # Save the image as 'graph_1.png'
 
            # Displaying the saved image in Streamlit
-           st.image('graph_1.png', width=200)
+           st.image('graph_1.png', width=500)
 
 with tab2:
                # Subheader 2
