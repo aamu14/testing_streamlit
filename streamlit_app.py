@@ -288,7 +288,6 @@ distance
     st.code(code2, language='R')
 process2 = subprocess.Popen(["Rscript", "bagian 2 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result2 = process2.communicate()
-
 image6 = Image.open('sk6_plot.png')
 st.image(image6)
 
