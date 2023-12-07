@@ -51,7 +51,7 @@ st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah TK/RA')
 
 tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
                       'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
-# Subheader 2
+with tab1:
            st.subheader('Perbandingan Luas Daerah Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
