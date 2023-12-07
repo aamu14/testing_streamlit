@@ -3,6 +3,13 @@ import subprocess
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
+
+# Configure
+st.set_page_config(
+    page_title="Project Intern BPS Kota Bandar Lampung",
+    layout="wide", page_icon="📈"
+)
+
 st.header('🎈 R x Python Streamlit App')
 
 st.sidebar.markdown('''
