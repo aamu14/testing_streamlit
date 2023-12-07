@@ -173,7 +173,7 @@ with tab6:
            sorted_data = data.sort_values(by='Tingkat SMA/SMK/MA', ascending=False)
            # Creating a histogram using Matplotlib
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat Tingkat SMA/SMK/MA'])
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat SMA/SMK/MA'])
            plt.xlabel('Kecamatan')
            plt.ylabel('Tingkat SMA/SMK/MA')
            plt.title('Histogram of Tingkat Tingkat SMA/SMK/MA by Kecamatan')
