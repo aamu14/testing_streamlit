@@ -260,26 +260,10 @@ distance
     st.code(code1, language='R')
 process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
-image2 = Image.open('sk2_plot.png')
-image3 = Image.open('sk3_plot.png')
-image4 = Image.open('sk4_plot.png')
-image5 = Image.open('sk5_plot.png')
-
-st.image(image2)
-st.image(image3)
-st.image(image4)
-st.image(image5)
-st.markdown("""---""")
-
-image6 = Image.open('sk6_plot.png')
-image7 = Image.open('sk7_plot.png')
-image8 = Image.open('sk8_plot.png')
-image9 = Image.open('sk9_plot.png')
-st.image(image6)
-st.image(image7)
-st.image(image8)
-st.image(image9)
-
+st.write(result1)
+# Read the Excel file into a DataFrame
+data4 = pd.read_csv("silhouette.csv")
+st.dataframe(data4, height=300)
 st.markdown("""---""")
 
 with st.expander('See code'):
