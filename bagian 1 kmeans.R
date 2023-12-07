@@ -12,6 +12,8 @@ df <- df[,-1]
 z <- scale(df)
 # Calculate Euclidean distance
 distance <- dist(z)
+hc.c<-hclust(distance)
+#plot(hc.c, labels=Data_Per_Kecamatan_Bandar_Lampung$Kecamatan,cex=.7)
 #complete linkage
 #set the cluster we needed. in this case, i use cluster between 2 to 5.
 clusterCut_2<-cutree(hc.c,2)
