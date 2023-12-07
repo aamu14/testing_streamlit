@@ -3,6 +3,7 @@ import subprocess
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
+from st_aggrid import AgGrid
 # Configure
 st.set_page_config(
     page_title="Project Intern BPS Kota Bandar Lampung",
@@ -285,4 +286,4 @@ result2 = process2.communicate()
 st.write(result2)
 # Read the Excel file into a DataFrame
 data3 = pd.read_csv("calinhara.csv")
-st.dataframe(data3, height=300, width=500)
+AgGrid(st.dataframe(data3, height=300, width=500))
