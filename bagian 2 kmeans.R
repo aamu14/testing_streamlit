@@ -10,6 +10,8 @@ df <- read.csv("datatest.csv",
 df <- df[,-1]
 # Scale the data
 z <- scale(df)
+# Calculate Euclidean distance
+distance <- dist(z)
 #kmeans
 kc2<- kmeans(z,2)
 kc3<- kmeans(z,3)
@@ -20,10 +22,10 @@ clusterCut_7<-kc3
 clusterCut_8<-kc4
 clusterCut_9<-kc5
 
-sk6 <-silhouette(clusterCut_6,distance)
-sk7 <-silhouette(clusterCut_7,distance)
-sk8 <-silhouette(clusterCut_8,distance)
-sk9 <-silhouette(clusterCut_9,distance)
+sk6 <-silhouette(clusterCut_6$cluster,distance)
+sk7 <-silhouette(clusterCut_7$cluster,distance)
+sk8 <-silhouette(clusterCut_8$cluster,distance)
+sk9 <-silhouette(clusterCut_9$cluster,distance)
 
 png("sk6_plot.png")
 plot(sk6)
