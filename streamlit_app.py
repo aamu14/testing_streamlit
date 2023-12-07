@@ -52,74 +52,70 @@ data = pd.read_csv("datatest.csv")
 
 # Header 1
 st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah TK/RA')
-           # Subheader 1
-           st.subheader('Perbandingan Luas Daerah Setiap Kecamatan')
-           # Sorting the DataFrame by 'Tingkat TK' column in descending order
-           sorted_data = data.sort_values(by='Luas Daerah (km^2)', ascending=False)
-           # Creating a histogram using Matplotlib
-           plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Luas Daerah (km^2)'])
-           plt.xlabel('Kecamatan')
-           plt.ylabel('Luas Daerah')
-           plt.title('Histogram of Luas Daerah by Kecamatan')
-           plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
+# Subheader 1
+st.subheader('Perbandingan Luas Daerah Setiap Kecamatan')
+# Sorting the DataFrame by 'Tingkat TK' column in descending order
+sorted_data = data.sort_values(by='Luas Daerah (km^2)', ascending=False)
+# Creating a histogram using Matplotlib
+plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
+bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Luas Daerah (km^2)'])
+plt.xlabel('Kecamatan')
+plt.ylabel('Luas Daerah')
+plt.title('Histogram of Luas Daerah by Kecamatan')
+plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
            
-           # Adding values on top of the bars
-           for bar in bars:
-               yval = bar.get_height()
-               plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
+# Adding values on top of the bars
+for bar in bars:
+    yval = bar.get_height()
+    plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
 
-           plt.tight_layout()
+plt.tight_layout()
 
-           # Saving the histogram as an image
-           plt.savefig('graph_1.png')  # Save the image as 'graph_1.png'
+# Saving the histogram as an image
+plt.savefig('graph_1.png')  # Save the image as 'graph_1.png'
 
     # Subheader 2
-           st.subheader('Perbandingan Kepadatan Penduduk Setiap Kecamatan')
-           # Sorting the DataFrame by 'Tingkat TK' column in descending order
-           sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
+st.subheader('Perbandingan Kepadatan Penduduk Setiap Kecamatan')
+# Sorting the DataFrame by 'Tingkat TK' column in descending order
+sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
      # Creating a histogram using Matplotlib
-           plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Kepadatan Penduduk per km^2'])
-           plt.xlabel('Kecamatan')
-           plt.ylabel('Kepadatan Penduduk')
-           plt.title('Histogram of Kepadatan Penduduk by Kecamatan')
-           plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
+plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
+bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Kepadatan Penduduk per km^2'])
+plt.xlabel('Kecamatan')
+plt.ylabel('Kepadatan Penduduk')
+plt.title('Histogram of Kepadatan Penduduk by Kecamatan')
+plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
 
-           # Adding values on top of the bars
-           for bar in bars:
-               yval = bar.get_height()
-               plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
+ # Adding values on top of the bars
+for bar in bars:
+    yval = bar.get_height()
+    plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
 
-           plt.tight_layout()
+plt.tight_layout()
            # Saving the histogram as an image
-           plt.savefig('graph_2.png')  # Save the image as 'graph_1.png'
+plt.savefig('graph_2.png')  # Save the image as 'graph_1.png'
 
 
 # Subheader 3
-           st.subheader('Perbandingan Banyaknya Sekolah Tingkat TK/RA Setiap Kecamatan')
-           # Sorting the DataFrame by 'Tingkat TK' column in descending order
-           sorted_data = data.sort_values(by='Tingkat TK/RA', ascending=False)
-           # Creating a histogram using Matplotlib
-           plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat TK/RA'])
-           plt.xlabel('Kecamatan')
-           plt.ylabel('Tingkat TK/RA')
-           plt.title('Histogram of Tingkat TK/RA by Kecamatan')
-           plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
-           
-           # Adding values on top of the bars
-           for bar in bars:
-               yval = bar.get_height()
-               plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
-
-           plt.tight_layout()
-
-           # Saving the histogram as an image
-           plt.savefig('graph_3.png')  # Save the image as 'graph_1.png'
-
-           images: ['graph_1.png', 'graph_2.png', 'graph_3.png'] 
-           st.image(images, use_column_width=True
+st.subheader('Perbandingan Banyaknya Sekolah Tingkat TK/RA Setiap Kecamatan')
+# Sorting the DataFrame by 'Tingkat TK' column in descending order
+sorted_data = data.sort_values(by='Tingkat TK/RA', ascending=False)
+# Creating a histogram using Matplotlib
+plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
+bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat TK/RA'])
+plt.xlabel('Kecamatan')
+plt.ylabel('Tingkat TK/RA')
+plt.title('Histogram of Tingkat TK/RA by Kecamatan')
+plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
+# Adding values on top of the bars
+for bar in bars:
+    yval = bar.get_height()
+    plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
+plt.tight_layout()
+# Saving the histogram as an image
+plt.savefig('graph_3.png')  # Save the image as 'graph_1.png'
+images: ['graph_1.png', 'graph_2.png', 'graph_3.png'] 
+st.image(images, use_column_width=True
  
 
 # Horizontal Divider
