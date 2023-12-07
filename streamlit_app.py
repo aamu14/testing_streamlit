@@ -273,3 +273,10 @@ st.markdown("""---""")
 
 image6 = Image.open('sk6_plot.png')
 st.image(image6)
+image7 = Image.open('sk7_plot.png')
+st.image(image7)
+image8 = Image.open('sk8_plot.png')
+st.image(image8)
+image9 = Image.open('sk9_plot.png')
+st.image(image9)
+
