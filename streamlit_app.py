@@ -111,7 +111,7 @@ with tab2:
            sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
      # Creating a histogram using Matplotlib
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-           bars = plt.bar(sorted_data['Kecamatan'], sorted_data_tab2['Kepadatan Penduduk per km^2'])
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Kepadatan Penduduk per km^2'])
            plt.xlabel('Kecamatan')
            plt.ylabel('Kepadatan Penduduk per km^2')
            plt.title('Histogram of Kepadatan Penduduk per km^2 by Kecamatan')
