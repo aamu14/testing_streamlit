@@ -78,11 +78,7 @@ with tab1:
            # Saving the histogram as an image
            plt.savefig('graph_1.png')  # Save the image as 'graph_1.png'
 
-           # Displaying the saved image in Streamlit
-           st.image('graph_1.png', width=500)
-
-with tab2:
-               # Subheader 2
+    # Subheader 2
            st.subheader('Perbandingan Kepadatan Penduduk Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
@@ -102,11 +98,9 @@ with tab2:
            plt.tight_layout()
            # Saving the histogram as an image
            plt.savefig('graph_2.png')  # Save the image as 'graph_1.png'
-           # Displaying the saved image in Streamlit
-           st.image('graph_2.png')
 
-with tab3:
-               # Subheader 3
+
+# Subheader 3
            st.subheader('Perbandingan Banyaknya Sekolah Tingkat TK/RA Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Tingkat TK/RA', ascending=False)
@@ -128,8 +122,14 @@ with tab3:
            # Saving the histogram as an image
            plt.savefig('graph_3.png')  # Save the image as 'graph_1.png'
 
-           # Displaying the saved image in Streamlit
-           st.image('graph_3.png')
+           images: ['graph_1.png', 'graph_2.png', 'graph_3.png'] 
+           st.image(images, use_column_width=True
+
+with tab2:
+               
+
+with tab3:
+               
 
 # Horizontal Divider
 st.markdown("""---""")
