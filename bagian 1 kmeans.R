@@ -8,3 +8,7 @@ library(knitr)
 df <- read.csv("datatest.csv",
                 header = TRUE, sep = ",")
 df <- df[,-1]
+# Scale the data
+z <- scale(df)
+# Calculate Euclidean distance
+distance <- dist(z)
