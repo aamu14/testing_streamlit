@@ -232,6 +232,18 @@ st.markdown("""---""")
 
 
 st.subheader('1. Printing text in R')
+st.markdown("""
+            Langkah selanjutnya adalah melakukan Clustering. Ada 2 jenis metode clustering yang akan digunakan, yaitu hierarchical dan non-hierarchical. metode hierarchical yang akan digunakan adalah K-means, sedangkan metode non-hierarchical yang akan digunakan adalah average linkage; complete linkage; ward's method.  Adapun tahapannya adalah sebagai berikut:
+            1. melakukan normalisasi data (jika dibutuhkan) dan menghitung jarak euclidean.
+            2. menentukan banyak cluster 
+            3. menguji masing-masing jumlah cluster agar mendapatkan jumlah cluster yang terbaik untuk masing-masing metode.
+            4. membandingkan hasil dari semua pengujian, lalu dibandingkan dengan masing-masing metode
+            5. metode dengan hasil pengujian yang valid paling banyak akan menjadi metode cluster terbaik
+            6. menampilkan cluster dendogram dari metode cluster yang terpilih
+            7. melakukan visualisasi dari metode cluster yang terpilih
+            """)
+
+
 with st.expander('See code'):
     code1 = '''library(readxl)
 library(cluster)
@@ -248,4 +260,4 @@ distance
     st.code(code1, language='r')
 process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
-st.dataframe(result1, hide_index=True)
+st.dataframe(result1)
