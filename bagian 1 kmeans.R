@@ -23,9 +23,28 @@ clusterCut_3<-kc3
 clusterCut_4<-kc4
 clusterCut_5<-kc5
 
-#use dunn index
-library(clValid)
-dunn(distance, clusterCut_2$cluster)
-dunn(distance, clusterCut_3$cluster)
-dunn(distance, clusterCut_4$cluster)
-dunn(distance, clusterCut_5$cluster)
+library(cluster)
+
+# Your code to generate the plots
+sk2 <- silhouette(clusterCut_2$cluster, distance)
+sk3 <- silhouette(clusterCut_3$cluster, distance)
+sk4 <- silhouette(clusterCut_4$cluster, distance)
+sk5 <- silhouette(clusterCut_5$cluster, distance)
+
+# Open PNG devices to save the plots
+png("sk2_plot.png")
+plot(sk2)
+dev.off()
+
+png("sk3_plot.png")
+plot(sk3)
+dev.off()
+
+png("sk4_plot.png")
+plot(sk4)
+dev.off()
+
+png("sk5_plot.png")
+plot(sk5)
+dev.off()
+
