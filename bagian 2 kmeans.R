@@ -28,15 +28,3 @@ sk9 <-silhouette(clusterCut_9,distance)
 png("sk6_plot.png")
 plot(sk6)
 dev.off()
-
-png("sk7_plot.png")
-plot(sk7)
-dev.off()
-
-png("sk8_plot.png")
-plot(sk8)
-dev.off()
-
-png("sk9_plot.png")
-plot(sk9)
-dev.off()
