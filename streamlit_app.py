@@ -119,7 +119,7 @@ st.image(images, use_column_width=True
  
 
 # Horizontal Divider
-st.markdown("""---""")
+#st.markdown("""---""")
 
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
