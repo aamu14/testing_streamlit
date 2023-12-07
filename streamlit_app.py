@@ -52,9 +52,10 @@ st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah TK/RA')
 tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
                       'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
 with tab1:
+    #subheader 1
            st.subheader('Perbandingan Luas Daerah Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
-           sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
+           sorted_data = data.sort_values(by='Luas Daerah (km^2)', ascending=False)
      # Creating a histogram using Matplotlib
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
            bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Luas Daerah (km^2)'])
