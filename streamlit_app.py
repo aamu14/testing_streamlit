@@ -290,11 +290,5 @@ process2 = subprocess.Popen(["Rscript", "bagian 2 kmeans.R"], stdout=subprocess.
 result2 = process2.communicate()
 
 image6 = Image.open('sk6_plot.png')
-image7 = Image.open('sk7_plot.png')
-image8 = Image.open('sk8_plot.png')
-image9 = Image.open('sk9_plot.png')
-
 st.image(image6)
-st.image(image7)
-st.image(image8)
-st.image(image9)
+
