@@ -50,18 +50,11 @@ st.markdown("""
 # Assuming your data is in a CSV file named 'data.csv'
 data = pd.read_csv("datatest.csv")
 
-# Sorting the DataFrame by 'Tingkat TK' column in descending order
-sorted_data = data.sort_values(by='Tingkat TK/RA', ascending=False)
-
-import pandas as pd
-import matplotlib.pyplot as plt
-import streamlit as st
-
 # Assuming your data is in a CSV file named 'data.csv'
 data = pd.read_csv("datatest.csv")
 
 # Header 1
-st.header('Obsevasi Data Kredit dan PDRB')
+st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah Tingkat TK/RA')
 
 tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
                       'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
@@ -134,6 +127,87 @@ with tab3:
 
            # Displaying the saved image in Streamlit
            st.image('graph_3.png')
+
+# Horizontal Divider
+st.divider()
+
+# Header 2
+st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah Tingkat SD/MI')
+
+tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
+                      'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat Tingkat SD/MI VS Kecamatan'])
+with tab1:
+           # Sorting the DataFrame by 'Tingkat TK' column in descending order
+           sorted_data = data.sort_values(by='Luas Daerah (km^2)', ascending=False)
+           # Creating a histogram using Matplotlib
+           plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Luas Daerah (km^2)'])
+           plt.xlabel('Kecamatan')
+           plt.ylabel('Luas Daerah')
+           plt.title('Histogram of Luas Daerah by Kecamatan')
+           plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
+           
+           # Adding values on top of the bars
+           for bar in bars:
+               yval = bar.get_height()
+               plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
+
+           plt.tight_layout()
+
+           # Saving the histogram as an image
+           plt.savefig('graph_4.png')  # Save the image as 'graph_1.png'
+
+           # Displaying the saved image in Streamlit
+           st.image('graph_4.png')
+
+with tab2:
+           # Sorting the DataFrame by 'Tingkat TK' column in descending order
+           sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
+     # Creating a histogram using Matplotlib
+           plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Kepadatan Penduduk per km^2'])
+           plt.xlabel('Kecamatan')
+           plt.ylabel('Kepadatan Penduduk')
+           plt.title('Histogram of Kepadatan Penduduk by Kecamatan')
+           plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
+
+           # Adding values on top of the bars
+           for bar in bars:
+               yval = bar.get_height()
+               plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
+
+           plt.tight_layout()
+           # Saving the histogram as an image
+           plt.savefig('graph_5.png')  # Save the image as 'graph_1.png'
+           # Displaying the saved image in Streamlit
+           st.image('graph_5.png')
+
+with tab3:
+           # Sorting the DataFrame by 'Tingkat TK' column in descending order
+           sorted_data = data.sort_values(by='Tingkat SD/MI', ascending=False)
+           # Creating a histogram using Matplotlib
+           plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat SD/MI'])
+           plt.xlabel('Kecamatan')
+           plt.ylabel('Tingkat SD/MI')
+           plt.title('Histogram of Tingkat SD/MI by Kecamatan')
+           plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
+           
+           # Adding values on top of the bars
+           for bar in bars:
+               yval = bar.get_height()
+               plt.text(bar.get_x() + bar.get_width() / 2, yval, round(yval, 2), va='bottom', ha='center')
+
+           plt.tight_layout()
+
+           # Saving the histogram as an image
+           plt.savefig('graph_6.png')  # Save the image as 'graph_1.png'
+
+           # Displaying the saved image in Streamlit
+           st.image('graph_6.png')
+
+
+
 
 
 st.subheader('1. Printing text in R')
