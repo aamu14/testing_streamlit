@@ -42,9 +42,12 @@ st.markdown("""---""")
 # Assuming your data is in a CSV file named 'data.csv'
 #data = pd.read_csv("datatest.csv")
 
-# Header 1
+ #Header 1
 
-#st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
+st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
+images= ['fig1.png', 'fig2.png', 'fig3.png', 'fig4.png']
+# Displaying the saved image in Streamlit
+st.image(images, use_column_width=True)
 
 #tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
 #                      'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
