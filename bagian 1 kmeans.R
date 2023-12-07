@@ -12,24 +12,19 @@ df <- df[,-1]
 z <- scale(df)
 # Calculate Euclidean distance
 distance <- dist(z)
+#complete linkage
 #set the cluster we needed. in this case, i use cluster between 2 to 5.
-kc2<- kmeans(z,2)
-kc3<- kmeans(z,3)
-kc4<- kmeans(z,4)
-kc5<- kmeans(z,5)
-
-clusterCut_2<-kc2
-clusterCut_3<-kc3
-clusterCut_4<-kc4
-clusterCut_5<-kc5
+clusterCut_2<-cutree(hc.c,2)
+clusterCut_3<-cutree(hc.c,3)
+clusterCut_4<-cutree(hc.c,4)
+clusterCut_5<-cutree(hc.c,5)
 
 library(cluster)
 
-# Your code to generate the plots
-sk2 <- silhouette(clusterCut_2$cluster, distance)
-sk3 <- silhouette(clusterCut_3$cluster, distance)
-sk4 <- silhouette(clusterCut_4$cluster, distance)
-sk5 <- silhouette(clusterCut_5$cluster, distance)
+sk2 <-silhouette(clusterCut_2,distance)
+sk3 <-silhouette(clusterCut_3,distance)
+sk4 <-silhouette(clusterCut_4,distance)
+sk5 <-silhouette(clusterCut_5,distance)
 
 # Open PNG devices to save the plots
 png("sk2_plot.png")
