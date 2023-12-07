@@ -45,16 +45,13 @@ st.dataframe(data_summary, height=300)
 st.markdown("""
            Dari tabel di atas dapat dilihat bahwa terdapat satu kecamatan yang luasnya sangat kecil, yaitu 2,03 km^2, sedangkan daerah yang paling luas memiliki ukuran sebesar 24,24 km^2.  Selanjutnya, kepadatan penduduk yang paling kecil bernilai 3336 orang/km^2 dan nilai paling besar yaitu 22018 orang/km^2.  Selain itu, terdapat indikasi pencilan (outlier) pada beberapa variabel yang dapat dilihat dari jauhnya rentang nilai minimum ke nilai maksimum dari masing-masing variabel.  Pencilan ini dapat mempengaruhi keakuratan analisis. Tetapi, tidak dilakukan penghapusan data karena semua kecamatan harus dipertimbangkan.
            """)
-
-
-# Assuming your data is in a CSV file named 'data.csv'
-data = pd.read_csv("datatest.csv")
+st.markdown("""---""")
 
 # Assuming your data is in a CSV file named 'data.csv'
 data = pd.read_csv("datatest.csv")
 
 # Header 1
-st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
+st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah TK/RA')
 
 tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
                       'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
@@ -82,7 +79,7 @@ with tab1:
            plt.savefig('graph_1.png')  # Save the image as 'graph_1.png'
 
            # Displaying the saved image in Streamlit
-           st.image('graph_1.png')
+           st.image('graph_1.png', width=200)
 
 with tab2:
                # Subheader 2
