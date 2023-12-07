@@ -135,8 +135,7 @@ with tab3:
            st.image('graph_3.png')
 
 # Horizontal Divider
-st.divider()
-
+st.markdown("""---""")
 
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
