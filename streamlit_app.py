@@ -56,8 +56,8 @@ data = pd.read_csv("datatest.csv")
 # Header 1
 st.header('Obsevasi Data Kredit dan PDRB')
 
-tab1, tab2, tab3 = st.tabs(['Perbandingan Luas Daerah (km^2) Setiap Kecamatan',
-                      'Perbandingan Kepadatan Penduduk (per km^2) Setiap Kecamatan', 'Perbandingan Jumlah Sekolah di Tingkat TK/RA Setiap Kecamatan'])
+tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
+                      'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
 with tab1:
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Luas Daerah (km^2)', ascending=False)
@@ -81,7 +81,6 @@ with tab1:
 
            # Displaying the saved image in Streamlit
            st.image('graph_1.png')
-
 
 with tab2:
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
