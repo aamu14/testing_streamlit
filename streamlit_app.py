@@ -54,11 +54,13 @@ data = pd.read_csv("datatest.csv")
 data = pd.read_csv("datatest.csv")
 
 # Header 1
-st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah Tingkat TK/RA')
+st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
 
 tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
                       'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
 with tab1:
+           # Subheader 1
+           st.subheader('Perbandingan Luas Daerah Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Luas Daerah (km^2)', ascending=False)
            # Creating a histogram using Matplotlib
@@ -83,6 +85,8 @@ with tab1:
            st.image('graph_1.png')
 
 with tab2:
+               # Subheader 2
+           st.subheader('Perbandingan Kepadatan Penduduk Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
      # Creating a histogram using Matplotlib
@@ -105,6 +109,8 @@ with tab2:
            st.image('graph_2.png')
 
 with tab3:
+               # Subheader 3
+           st.subheader('Perbandingan Banyaknya Sekolah Tingkat TK/RA Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Tingkat TK/RA', ascending=False)
            # Creating a histogram using Matplotlib
