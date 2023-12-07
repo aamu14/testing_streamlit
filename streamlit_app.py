@@ -52,10 +52,6 @@ data = pd.read_csv("datatest.csv")
 
 # Header 1
 st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah TK/RA')
-
-tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
-                      'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
-with tab1:
            # Subheader 1
            st.subheader('Perbandingan Luas Daerah Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
@@ -124,12 +120,7 @@ with tab1:
 
            images: ['graph_1.png', 'graph_2.png', 'graph_3.png'] 
            st.image(images, use_column_width=True
-
-with tab2:
-               
-
-with tab3:
-               
+ 
 
 # Horizontal Divider
 st.markdown("""---""")
