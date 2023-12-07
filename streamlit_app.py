@@ -226,6 +226,11 @@ with col8:
    st.header("Untuk Tingkat SMA/SMK/MA")
    st.image("fig8.png")
 
+# Horizontal Divider
+st.markdown("""---""")
+
+
+
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
     code1 = '''library(readxl)
@@ -240,7 +245,7 @@ z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
 distance <- dist(z)
 distance
     '''
-    #st.code(code1, language='r')
-#process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-#result1 = process1.communicate()
-#st.dataframe(result1, hide_index=True)
+    st.code(code1, language='r')
+process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+result1 = process1.communicate()
+st.dataframe(result1, hide_index=True)
