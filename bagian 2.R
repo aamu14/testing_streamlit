@@ -38,10 +38,10 @@ c_a3<-calinhara(z,clusterCut_4)
 c_a4<-calinhara(z,clusterCut_5)
 
 #calinhara for kmeans
-k_ca1<-calinhara(z,clusterCut_2$cluster)
-k_ca2<-calinhara(z,clusterCut_3$cluster)
-k_ca3<-calinhara(z,clusterCut_4$cluster)
-k_ca4<-calinhara(z,clusterCut_5$cluster)
+k_ca1<-calinhara(z,clusterCut_6$cluster)
+k_ca2<-calinhara(z,clusterCut_7$cluster)
+k_ca3<-calinhara(z,clusterCut_8$cluster)
+k_ca4<-calinhara(z,clusterCut_9$cluster)
 
 # Creating a dataframe
 dataconvert <- data.frame(
