@@ -41,22 +41,24 @@ sk7 <-silhouette(clusterCut_7$cluster,distance)
 sk8 <-silhouette(clusterCut_8$cluster,distance)
 sk9 <-silhouette(clusterCut_9$cluster,distance)
 
-# Extracting average silhouette width values
-avg_width_sk2 <- sk2$avg.width
-avg_width_sk3 <- sk3$avg.width
-avg_width_sk4 <- sk4$avg.width
-avg_width_sk5 <- sk5$avg.width
-# Extracting average silhouette width values
-avg_width_sk6 <- sk6$avg.width
-avg_width_sk7 <- sk7$avg.width
-avg_width_sk8 <- sk8$avg.width
-avg_width_sk9 <- sk9$avg.width
+# Extracting silhouette widths and calculating averages
+sil_widths_sk2 <- mean(sk2[, "sil_width"])
+sil_widths_sk3 <- mean(sk3[, "sil_width"])
+sil_widths_sk4 <- mean(sk4[, "sil_width"])
+sil_widths_sk5 <- mean(sk5[, "sil_width"])
+sil_widths_sk6 <- mean(sk6[, "sil_width"])
+sil_widths_sk7 <- mean(sk7[, "sil_width"])
+sil_widths_sk8 <- mean(sk8[, "sil_width"])
+sil_widths_sk9 <- mean(sk9[, "sil_width"])
 
-# Extracting average silhouette width values
+# Creating dataframes for each cluster
 avg_widths <- data.frame(
   Method = c("Complete", "Complete", "Complete", "Complete", "K-Means", "K-Means", "K-Means", "K-Means"),
-  Cluster = c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"),
-  Average_Silhouette_Width = c(sk2$avg.width, sk3$avg.width, sk4$avg.width, sk5$avg.width, sk6$avg.width,sk7$avg.width, sk8$avg.width, sk9$avg.width)
+  Cluster = c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"),
+  Average_Silhouette_Width = c(
+    sil_widths_sk2, sil_widths_sk3, sil_widths_sk4, sil_widths_sk5,
+    sil_widths_sk6, sil_widths_sk7, sil_widths_sk8, sil_widths_sk9
+  )
 )
 
 # Saving the dataframe into a CSV file named 'silhouette.csv'
