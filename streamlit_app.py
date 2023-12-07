@@ -264,7 +264,7 @@ result1 = process1.communicate()
 st.write(result1)
 # Read the Excel file into a DataFrame
 data4 = pd.read_csv("silhouette.csv")
-st.dataframe(data4, height=300)
+AgGrid(data4)
 st.markdown("""---""")
 
 with st.expander('See code'):
@@ -286,4 +286,4 @@ result2 = process2.communicate()
 st.write(result2)
 # Read the Excel file into a DataFrame
 data3 = pd.read_csv("calinhara.csv")
-AgGrid(st.dataframe(data3, height=300, width=500))
+st.dataframe(data3, height=300)
