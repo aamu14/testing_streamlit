@@ -91,7 +91,7 @@ with tab2:
            # Saving the histogram as an image
            plt.savefig('graph_2.png')  # Save the image as 'graph_1.png'
            # Displaying the saved image in Streamlit
-           st.image('graph_3.png')
+           st.image('graph_2.png')
 
 
 
