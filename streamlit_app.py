@@ -264,7 +264,7 @@ result1 = process1.communicate()
 st.write(result1)
 # Read the Excel file into a DataFrame
 data4 = pd.read_csv("silhouette.csv")
-AgGrid(data4)
+st.dataframe(data4, height=300, width=600)
 st.markdown("""---""")
 
 with st.expander('See code'):
