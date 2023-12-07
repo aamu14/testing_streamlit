@@ -231,7 +231,7 @@ st.markdown("""---""")
 
 
 
-st.subheader('1. Printing text in R')
+st.subheader('Melakukan Analisis Cluster (Clustering)')
 st.markdown("""
             Langkah selanjutnya adalah melakukan Clustering. Ada 2 jenis metode clustering yang akan digunakan, yaitu hierarchical dan non-hierarchical. metode hierarchical yang akan digunakan adalah K-means, sedangkan metode non-hierarchical yang akan digunakan adalah average linkage; complete linkage; ward's method.  Adapun tahapannya adalah sebagai berikut:
             1. melakukan normalisasi data (jika dibutuhkan) dan menghitung jarak euclidean.
