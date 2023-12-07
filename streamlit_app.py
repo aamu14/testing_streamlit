@@ -121,23 +121,23 @@ st.image(images, use_column_width=True
 # Horizontal Divider
 #st.markdown("""---""")
 
-st.subheader('1. Printing text in R')
-with st.expander('See code'):
-    code1 = '''library(readxl)
-library(cluster)
-library(factoextra)
-library(fpc)
+#st.subheader('1. Printing text in R')
+#with st.expander('See code'):
+#    code1 = '''library(readxl)
+#library(cluster)
+#library(factoextra)
+#library(fpc)
 
 # Read the data file
-Data_Per_Kecamatan_Bandar_Lampung <- read_excel("datatest.xlsx")
+#Data_Per_Kecamatan_Bandar_Lampung <- read_excel("datatest.xlsx")
 
 # Scale the data
-z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
+#z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
 
 # Calculate Euclidean distance
-distance <- dist(z)
-distance
-    '''
+#distance <- dist(z)
+#distance
+#    '''
 
 
 
