@@ -282,3 +282,22 @@ st.image(image9)
 
 st.markdown("""---""")
 
+with st.expander('See code'):
+    code2 = '''library(readxl)
+library(cluster)
+library(factoextra)
+library(fpc)
+# Read the data file
+Data_Per_Kecamatan_Bandar_Lampung <- read_excel("datatest.xlsx")
+# Scale the data
+z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
+# Calculate Euclidean distance
+distance <- dist(z)
+distance
+    '''
+    st.code(code2, language='R')
+process1 = subprocess.Popen(["Rscript", "bagian 2.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+result1 = process1.communicate()
+# Read the Excel file into a DataFrame
+data = pd.read_csv("calinhara.csv")
+st.dataframe(data, height=300)
