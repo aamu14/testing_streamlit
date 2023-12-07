@@ -296,8 +296,9 @@ distance <- dist(z)
 distance
     '''
     st.code(code2, language='R')
-process1 = subprocess.Popen(["Rscript", "bagian 2.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-result1 = process1.communicate()
+process2 = subprocess.Popen(["Rscript", "bagian 2.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+result2 = process2.communicate()
+st.write(result2)
 # Read the Excel file into a DataFrame
-data = pd.read_csv("calinhara.csv")
-st.dataframe(data, height=300)
+data3 = pd.read_csv("calinhara.csv")
+st.dataframe(data3, height=300)
