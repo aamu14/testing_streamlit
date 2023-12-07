@@ -45,6 +45,7 @@ st.markdown("""---""")
  #Header 1
 
 st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
+st.columns(4)
 images= ['fig1.png', 'fig2.png', 'fig3.png', 'fig4.png']
 # Displaying the saved image in Streamlit
 st.image(images, use_column_width=True)
