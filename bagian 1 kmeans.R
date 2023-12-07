@@ -73,3 +73,15 @@ dev.off()
 png("sk9_plot.png")
 plot(sk9)
 dev.off()
+
+#calinhara for complete
+c_a1<-calinhara(z,clusterCut_2)
+c_a2<-calinhara(z,clusterCut_3)
+c_a3<-calinhara(z,clusterCut_4)
+c_a4<-calinhara(z,clusterCut_5)
+
+#calinhara for kmeans
+k_ca1<-calinhara(z,clusterCut_2$cluster)
+k_ca2<-calinhara(z,clusterCut_3$cluster)
+k_ca3<-calinhara(z,clusterCut_4$cluster)
+k_ca4<-calinhara(z,clusterCut_5$cluster)
