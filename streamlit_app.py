@@ -45,7 +45,7 @@ st.markdown("""---""")
  #Header 1
 
 st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
-col1, col2, col3, col4 = st.columns(4)
+col1, col2 = st.columns(2)
 # Displaying the saved image in Streamlit
 with col1:
    st.header('Untuk Sekolah Tingkat TK/RA')
@@ -54,7 +54,8 @@ with col1:
 with col2:
    st.header("Untuk Tingkat SD/MI")
    st.image("fig2.png")
-
+    
+col3, col4 = st.columns(2)
 with col3:
    st.header("Untuk Tingkat SMP/MTs")
    st.image("fig3.png")
