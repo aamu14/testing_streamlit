@@ -134,9 +134,9 @@ st.divider()
 # Header 2
 st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah Tingkat SD/MI')
 
-tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
+tab4, tab5, tab6 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
                       'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat Tingkat SD/MI VS Kecamatan'])
-with tab1:
+with tab4:
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Luas Daerah (km^2)', ascending=False)
            # Creating a histogram using Matplotlib
@@ -160,7 +160,7 @@ with tab1:
            # Displaying the saved image in Streamlit
            st.image('graph_4.png')
 
-with tab2:
+with tab5:
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
      # Creating a histogram using Matplotlib
@@ -182,7 +182,7 @@ with tab2:
            # Displaying the saved image in Streamlit
            st.image('graph_5.png')
 
-with tab3:
+with tab6:
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
            sorted_data = data.sort_values(by='Tingkat SD/MI', ascending=False)
            # Creating a histogram using Matplotlib
