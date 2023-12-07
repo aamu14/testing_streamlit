@@ -281,4 +281,4 @@ st.image(image8)
 st.image(image9)
 
 st.markdown("""---""")
-st.write(result1)
+
