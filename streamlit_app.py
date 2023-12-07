@@ -203,6 +203,12 @@ with col4:
 
 # Horizontal Divider
 st.markdown("""---""")
+
+ #Header 2
+
+st.header('Observasi Jumlah Sekolah, Jumlah Guru, dan Jumlah Murid')
+
+
 st.subheader('1. Printing text in R')
 with st.expander('See code'):
     code1 = '''library(readxl)
