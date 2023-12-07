@@ -50,5 +50,7 @@ dataconvert <- data.frame(
   Value = c(c_a1, c_a2, c_a3, c_a4, k_ca1, k_ca2, k_ca3, k_ca4)
 )
 
-# Printing the dataframe
-print(dataconvert)
+# Your previous code to create the dataframe 'dataconvert'
+
+# Saving the dataframe into a CSV file named 'calinhara.csv'
+write.csv(dataconvert, file = "calinhara.csv", row.names = FALSE)
