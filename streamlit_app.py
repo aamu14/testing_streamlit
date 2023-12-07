@@ -72,7 +72,6 @@ with tab1:
 
            # Displaying the saved image in Streamlit
            st.image('graph_1.png')
-           st.image('graph_1.png')
 
 with tab2:
                # Subheader 2
