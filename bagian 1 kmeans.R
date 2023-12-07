@@ -73,25 +73,3 @@ dev.off()
 png("sk9_plot.png")
 plot(sk9)
 dev.off()
-
-#calinhara for complete
-c_a1<-calinhara(z,clusterCut_2)
-c_a2<-calinhara(z,clusterCut_3)
-c_a3<-calinhara(z,clusterCut_4)
-c_a4<-calinhara(z,clusterCut_5)
-
-#calinhara for kmeans
-k_ca1<-calinhara(z,clusterCut_2$cluster)
-k_ca2<-calinhara(z,clusterCut_3$cluster)
-k_ca3<-calinhara(z,clusterCut_4$cluster)
-k_ca4<-calinhara(z,clusterCut_5$cluster)
-
-# Creating a dataframe
-dataconvert <- data.frame(
-  Method = c("Complete", "Complete", "Complete", "Complete", "K-Means", "K-Means", "K-Means", "K-Means"),
-  Metric = c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"),
-  Value = c(c_a1, c_a2, c_a3, c_a4, k_ca1, k_ca2, k_ca3, k_ca4)
-)
-
-# Printing the dataframe
-print(dataconvert)
