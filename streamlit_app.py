@@ -170,13 +170,13 @@ with tab6:
                # Subheader 3
            st.subheader('Perbandingan Banyaknya Sekolah Tingkat SMA/MA/SMK Setiap Kecamatan')
            # Sorting the DataFrame by 'Tingkat TK' column in descending order
-           sorted_data = data.sort_values(by='Tingkat SMA/MA/SMK', ascending=False)
+           sorted_data = data.sort_values(by='Tingkat SMA/SMK/MA', ascending=False)
            # Creating a histogram using Matplotlib
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat SMA/MA/SMK'])
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat Tingkat SMA/SMK/MA'])
            plt.xlabel('Kecamatan')
-           plt.ylabel('Tingkat SMA/MA/SMK')
-           plt.title('Histogram of Tingkat SMA/MA/SMK by Kecamatan')
+           plt.ylabel('Tingkat SMA/SMK/MA')
+           plt.title('Histogram of Tingkat Tingkat SMA/SMK/MA by Kecamatan')
            plt.xticks(rotation=90)  # Rotate x-axis labels for better readability if needed
            
            # Adding values on top of the bars
