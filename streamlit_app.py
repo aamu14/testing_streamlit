@@ -44,18 +44,19 @@ st.markdown("""
 data = pd.read_csv("datatest.csv")
 
 # Sorting the DataFrame by 'Tingkat TK' column in descending order
-sorted_data = data.sort_values(by='Tingkat TK/RA', ascending=False)
+#sorted_data = data.sort_values(by='Tingkat TK/RA', ascending=False)
 
 
 # Header 1
 st.header('Obsevasi Data Kredit dan PDRB')
 
-tab1, tab2 = st.tabs(['Data Jumlah Pemberian Kredit',
-                      'Data Pertumbuhan PDRB'])
+tab1, tab2, tab3 = st.tabs(['Perbandingan TK Setiap Kecamatan',
+                      'Data Pertumbuhan PDRB', 'Perbandingan Luas Daerah Setiap Kecamatan])
 with tab1:
            # Creating a histogram using Matplotlib
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat TK/RA'])
+           sorted_data_tab1 = data.sort_values(by='Tingkat TK/RA', ascending=False)
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data_tab1['Tingkat TK/RA'])
            plt.xlabel('Kecamatan')
            plt.ylabel('Tingkat TK')
            plt.title('Histogram of Tingkat TK by Kecamatan')
@@ -76,7 +77,8 @@ with tab1:
 with tab2:
      # Creating a histogram using Matplotlib
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
-           bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Kepadatan Penduduk per km^2'])
+           sorted_data_tab2 = data.sort_values(by='Kepadatan Penduduk per km^2', ascending=False)
+           bars = plt.bar(sorted_data['Kecamatan'], sorted_data_tab2['Kepadatan Penduduk per km^2'])
            plt.xlabel('Kecamatan')
            plt.ylabel('Kepadatan Penduduk per km^2')
            plt.title('Histogram of Kepadatan Penduduk per km^2 by Kecamatan')
