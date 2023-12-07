@@ -47,7 +47,7 @@ data = pd.read_csv("datatest.csv")
 
 # Header 1
 
-st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah TK/RA')
+st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
 
 tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
                       'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
@@ -118,9 +118,6 @@ with tab3:
            st.image('graph_3.png')
 
 # Header 2
-
-st.header('Jumlah Sekolah Tingkat SD/MI, Tingkat SMP/MTs, Tingkat SMA/MA/SMK')
-
 tab4, tab5, tab6 = st.tabs(['Jumlah Sekolah di Tingkat SD/MI VS Kecamatan',
                       'Jumlah Sekolah di Tingkat SMP/MTs VS Kecamatan', 'Jumlah Sekolah di Tingkat SMA/MA/SMK VS Kecamatan'])
 with tab4:
