@@ -52,7 +52,7 @@ st.header('Obsevasi Data Kredit dan PDRB')
 
 tab1, tab2 = st.tabs(['Data Jumlah Pemberian Kredit',
                       'Data Pertumbuhan PDRB'])
-with tabl1:
+with tab1:
            # Creating a histogram using Matplotlib
            plt.figure(figsize=(10, 6))  # Adjust the figure size as needed
            bars = plt.bar(sorted_data['Kecamatan'], sorted_data['Tingkat TK/RA'])
