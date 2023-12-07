@@ -4,8 +4,7 @@ library(factoextra)
 library(fpc)
 library(knitr)
 
-# Load the openxlsx package
-library(openxlsx)
-# Read the data file
-df <- read_excel("datatest.xlsx")
+# Get content into a data frame
+df <- read.csv("datatest.csv",
+                header = TRUE, sep = ",")
 df <- df[,-1]
