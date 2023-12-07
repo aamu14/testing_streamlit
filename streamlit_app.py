@@ -285,4 +285,4 @@ result2 = process2.communicate()
 st.write(result2)
 # Read the Excel file into a DataFrame
 data3 = pd.read_csv("calinhara.csv")
-st.dataframe(data3, height=300)
+st.dataframe(data3, height=300, width=300)
