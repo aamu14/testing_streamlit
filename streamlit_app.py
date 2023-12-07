@@ -45,10 +45,23 @@ st.markdown("""---""")
  #Header 1
 
 st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
-st.columns(4)
-images= ['fig1.png', 'fig2.png', 'fig3.png', 'fig4.png']
+col1, col2, col3, col4 = st.columns(4)
 # Displaying the saved image in Streamlit
-st.image(images, use_column_width=True)
+with col1:
+   st.header('Untuk Sekolah Tingkat TK/RA')
+   st.image("fig1.png")
+
+with col2:
+   st.header("Untuk Tingkat SD/MI")
+   st.image("fig2.png")
+
+with col3:
+   st.header("Untuk Tingkat SMP/MTs")
+   st.image("fig3.png")
+
+with col4:
+   st.header("Untuk Tingkat SMA/SMK/MA")
+   st.image("fig4.png")
 
 #tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
 #                      'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
