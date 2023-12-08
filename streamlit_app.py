@@ -250,18 +250,30 @@ st.write(result1)
 col9, col10, col11, col12 = st.columns(4)
 # Displaying the saved image in Streamlit
 with col9:
+    st.markdown("""
+            Silhouette Score
+            """)
     # Read the Excel file into a DataFrame
     data4 = pd.read_csv("silhouette.csv")
     st.dataframe(data4, height=300, width=600)
 with col10:
+    st.markdown("""
+        Calinski-Harabasz Index
+        """)
     # Read the Excel file into a DataFrame
     data3 = pd.read_csv("calinhara.csv")
     st.dataframe(data3, height=300)
 with col11:
+    st.markdown("""
+        Davies-Bouldin Index
+        """)
     # Read the Excel file into a DataFrame
     data5 = pd.read_csv("dbi.csv")
     st.dataframe(data5, height=300)
 with col12:
+    st.markdown("""
+            Dunn Index
+            """)
     # Read the Excel file into a DataFrame
     data6 = pd.read_csv("dunn.csv")
     st.dataframe(data6, height=300)
