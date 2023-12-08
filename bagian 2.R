@@ -1,6 +1,6 @@
 library(readxl)
 library(cluster)
-library(factoextra)
+library(factoextra, quietly = T)
 library(fpc)
 library(knitr)
 
