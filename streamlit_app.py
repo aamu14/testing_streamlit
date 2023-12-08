@@ -51,18 +51,18 @@ st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
 # Secara Keseluruhan Penggunaan
 ikelompok = st.selectbox('Observasi Berdasarkan Tingkat',
                                ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'])
-    if ikelompok == 'Jumlah':
-        st.header('Untuk Sekolah Tingkat TK/RA')
-        st.image("fig1.png")
-    elif ikelompok == 'Rata-Rata':
-        st.header("Untuk Tingkat SD/MI")
-        st.image("fig2.png")
-    elif ikelompok == 'Median':
-        st.header("Untuk Tingkat SMP/MTs")
-        st.image("fig3.png")
-    else:
-        st.header("Untuk Tingkat SMA/SMK/MA")
-        st.image("fig4.png")
+if ikelompok == 'Jumlah':
+    st.header('Untuk Sekolah Tingkat TK/RA')
+    st.image("fig1.png")
+elif ikelompok == 'Rata-Rata':
+    st.header("Untuk Tingkat SD/MI")
+    st.image("fig2.png")
+elif ikelompok == 'Median':
+    st.header("Untuk Tingkat SMP/MTs")
+    st.image("fig3.png")
+else:
+    st.header("Untuk Tingkat SMA/SMK/MA")
+    st.image("fig4.png")
 
 
 #col1, col2 = st.columns(2)
