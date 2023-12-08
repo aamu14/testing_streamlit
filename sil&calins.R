@@ -4,7 +4,7 @@ suppressMessages(library("factoextra"))
 library(fpc, quietly = T)
 library(knitr, quietly = T)
 suppressMessages(library(dplyr))
-library(reshape2)
+suppressMessages(library(reshape2))
 
 # Get content into a data frame
 df_real <- read.csv("datatest.csv",
