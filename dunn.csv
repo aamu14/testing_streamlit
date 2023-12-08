@@ -1,0 +1,17 @@
+"Method","Cluster","Dunn_value"
+"Complete","Cluster 3",0.542687371373324
+"Average","Cluster 3",0.542687371373324
+"K-Means","Cluster 5",0.456833096990453
+"Complete","Cluster 5",0.456590137723661
+"Complete","Cluster 2",0.44824133364752
+"Average","Cluster 2",0.44824133364752
+"Ward's","Cluster 2",0.44824133364752
+"Average","Cluster 5",0.446488568454382
+"Ward's","Cluster 4",0.433883206436443
+"Ward's","Cluster 5",0.433883206436443
+"Average","Cluster 4",0.418604945021795
+"K-Means","Cluster 4",0.404923631739877
+"Complete","Cluster 4",0.36829609023791
+"K-Means","Cluster 3",0.298774844062342
+"K-Means","Cluster 2",0.290746592410075
+"Ward's","Cluster 3",0.273899362614677
