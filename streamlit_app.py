@@ -244,20 +244,9 @@ st.markdown("""
             7. melakukan visualisasi dari metode cluster yang terpilih
             """)
 
-
-with st.expander('See code'):
-    code1 = '''library(readxl)
-library(cluster)
-library(factoextra)
-library(fpc)
-# Read the data file
-Data_Per_Kecamatan_Bandar_Lampung <- read_excel("datatest.xlsx")
-# Scale the data
-z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
-# Calculate Euclidean distance
-distance <- dist(z)
-distance
-    '''
+col9, col10 = st.columns(2)
+# Displaying the saved image in Streamlit
+with col9:
     st.code(code1, language='R')
 process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
@@ -265,21 +254,8 @@ st.write(result1)
 # Read the Excel file into a DataFrame
 data4 = pd.read_csv("silhouette.csv")
 st.dataframe(data4, height=300, width=600)
-st.markdown("""---""")
 
-with st.expander('See code'):
-    code2 = '''library(readxl)
-library(cluster)
-library(factoextra)
-library(fpc)
-# Read the data file
-Data_Per_Kecamatan_Bandar_Lampung <- read_excel("datatest.xlsx")
-# Scale the data
-z <- scale(Data_Per_Kecamatan_Bandar_Lampung[,-1])
-# Calculate Euclidean distance
-distance <- dist(z)
-distance
-    '''
+with col10:
     st.code(code2, language='R')
 process2 = subprocess.Popen(["Rscript", "bagian 2.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result2 = process2.communicate()
