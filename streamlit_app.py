@@ -47,24 +47,42 @@ st.markdown("""---""")
  #Header 1
 
 st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
-col1, col2 = st.columns(2)
+
+# Secara Keseluruhan Penggunaan
+    ikelompok = st.selectbox('Observasi Berdasarkan Tingkat',
+                               ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'])
+    if ikelompok == 'Jumlah':
+        st.header('Untuk Sekolah Tingkat TK/RA')
+        st.image("fig1.png")
+    elif ikelompok == 'Rata-Rata':
+        st.header("Untuk Tingkat SD/MI")
+        st.image("fig2.png")
+    elif ikelompok == 'Median':
+        st.header("Untuk Tingkat SMP/MTs")
+        st.image("fig3.png")
+    else:
+        st.header("Untuk Tingkat SMA/SMK/MA")
+        st.image("fig4.png")
+
+
+#col1, col2 = st.columns(2)
 # Displaying the saved image in Streamlit
-with col1:
-   st.header('Untuk Sekolah Tingkat TK/RA')
-   st.image("fig1.png")
+#with col1:
+#   st.header('Untuk Sekolah Tingkat TK/RA')
+ #  st.image("fig1.png")
 
-with col2:
-   st.header("Untuk Tingkat SD/MI")
-   st.image("fig2.png")
+#with col2:
+ #  st.header("Untuk Tingkat SD/MI")
+ #  st.image("fig2.png")
     
-col3, col4 = st.columns(2)
-with col3:
-   st.header("Untuk Tingkat SMP/MTs")
-   st.image("fig3.png")
+#col3, col4 = st.columns(2)
+#with col3:
+#   st.header("Untuk Tingkat SMP/MTs")
+ #  st.image("fig3.png")
 
-with col4:
-   st.header("Untuk Tingkat SMA/SMK/MA")
-   st.image("fig4.png")
+#with col4:
+#   st.header("Untuk Tingkat SMA/SMK/MA")
+ #  st.image("fig4.png")
 
 #tab1, tab2, tab3 = st.tabs(['Luas Daerah (km^2) VS Kecamatan',
 #                      'Kepadatan Penduduk (per km^2) VS Kecamatan', 'Jumlah Sekolah di Tingkat TK/RA VS Kecamatan'])
