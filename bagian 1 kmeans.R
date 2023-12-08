@@ -63,3 +63,29 @@ avg_widths <- data.frame(
 
 # Saving the dataframe into a CSV file named 'silhouette.csv'
 write.csv(avg_widths, file = "silhouette.csv", row.names = FALSE)
+
+
+#for calinhara
+#calinhara for complete
+c_a1<-calinhara(z,clusterCut_2)
+c_a2<-calinhara(z,clusterCut_3)
+c_a3<-calinhara(z,clusterCut_4)
+c_a4<-calinhara(z,clusterCut_5)
+
+#calinhara for kmeans
+k_ca1<-calinhara(z,clusterCut_6$cluster)
+k_ca2<-calinhara(z,clusterCut_7$cluster)
+k_ca3<-calinhara(z,clusterCut_8$cluster)
+k_ca4<-calinhara(z,clusterCut_9$cluster)
+
+# Creating a dataframe
+dataconvert <- data.frame(
+  Method = c("Complete", "Complete", "Complete", "Complete", "K-Means", "K-Means", "K-Means", "K-Means"),
+  Metric = c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"),
+  Calinhara = c(c_a1, c_a2, c_a3, c_a4, k_ca1, k_ca2, k_ca3, k_ca4)
+)
+
+# Your previous code to create the dataframe 'dataconvert'
+
+# Saving the dataframe into a CSV file named 'calinhara.csv'
+write.csv(dataconvert, file = "calinhara.csv", row.names = FALSE)
