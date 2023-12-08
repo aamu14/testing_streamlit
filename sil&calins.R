@@ -20,11 +20,11 @@ clusterCut_2<-cutree(hc.c,2)
 clusterCut_3<-cutree(hc.c,3)
 clusterCut_4<-cutree(hc.c,4)
 clusterCut_5<-cutree(hc.c,5)
-
-sk2 <-silhouette(clusterCut_2,distance)
-sk3 <-silhouette(clusterCut_3,distance)
-sk4 <-silhouette(clusterCut_4,distance)
-sk5 <-silhouette(clusterCut_5,distance)
+#silhouette complete linkage
+sc2 <-silhouette(clusterCut_2,distance)
+sc3 <-silhouette(clusterCut_3,distance)
+sc4 <-silhouette(clusterCut_4,distance)
+sc5 <-silhouette(clusterCut_5,distance)
 
 #kmeans
 kc2<- kmeans(z,2)
@@ -35,29 +35,81 @@ clusterCut_6<-kc2
 clusterCut_7<-kc3
 clusterCut_8<-kc4
 clusterCut_9<-kc5
+#silhouette kmeans
+sk2 <-silhouette(clusterCut_6$cluster,distance)
+sk3 <-silhouette(clusterCut_7$cluster,distance)
+sk4 <-silhouette(clusterCut_8$cluster,distance)
+sk5 <-silhouette(clusterCut_9$cluster,distance)
 
-sk6 <-silhouette(clusterCut_6$cluster,distance)
-sk7 <-silhouette(clusterCut_7$cluster,distance)
-sk8 <-silhouette(clusterCut_8$cluster,distance)
-sk9 <-silhouette(clusterCut_9$cluster,distance)
+#average
+hc.a<- hclust(distance, method = "average")
+clusterCut_10<-cutree(hc.a,2);clusterCut_2
+clusterCut_11<-cutree(hc.a,3)
+clusterCut_12<-cutree(hc.a,4)
+clusterCut_13<-cutree(hc.a,5)
+
+#silhouette average
+sa2 <-silhouette(clusterCut_10,distance)
+sa3 <-silhouette(clusterCut_10,distance)
+sa4 <-silhouette(clusterCut_10,distance)
+sa5 <-silhouette(clusterCut_10,distance)
+
+#ward's
+hc.w<- hclust(distance, method = "ward.D")
+clusterCut_14<-cutree(hc.w,2)
+clusterCut_15<-cutree(hc.w,3)
+clusterCut_16<-cutree(hc.w,4)
+clusterCut_17<-cutree(hc.w,5)
+
+#silhouette ward's
+sw2 <-silhouette(clusterCut_14,distance)
+sw3 <-silhouette(clusterCut_15,distance)
+sw4 <-silhouette(clusterCut_16,distance)
+sw5 <-silhouette(clusterCut_17,distance)
+
 
 # Extracting silhouette widths and calculating averages
+sil_widths_sc2 <- mean(sc2[, "sil_width"])
+sil_widths_sc3 <- mean(sc3[, "sil_width"])
+sil_widths_sc4 <- mean(sc4[, "sil_width"])
+sil_widths_sc5 <- mean(sc5[, "sil_width"])
 sil_widths_sk2 <- mean(sk2[, "sil_width"])
 sil_widths_sk3 <- mean(sk3[, "sil_width"])
 sil_widths_sk4 <- mean(sk4[, "sil_width"])
 sil_widths_sk5 <- mean(sk5[, "sil_width"])
-sil_widths_sk6 <- mean(sk6[, "sil_width"])
-sil_widths_sk7 <- mean(sk7[, "sil_width"])
-sil_widths_sk8 <- mean(sk8[, "sil_width"])
-sil_widths_sk9 <- mean(sk9[, "sil_width"])
-
+sil_widths_sa2 <- mean(sa2[, "sil_width"])
+sil_widths_sa3 <- mean(sa3[, "sil_width"])
+sil_widths_sa4 <- mean(sa4[, "sil_width"])
+sil_widths_sa5 <- mean(sa5[, "sil_width"])
+sil_widths_sw2 <- mean(sw2[, "sil_width"])
+sil_widths_sw3 <- mean(sw3[, "sil_width"])
+sil_widths_sw4 <- mean(sw4[, "sil_width"])
+sil_widths_sw5 <- mean(sw5[, "sil_width"])
 # Creating dataframes for each cluster
+
+# Generating repeated sequences for each method
+repeats <- 4
+complete_method <- rep("Complete", repeats)
+kmeans_method <- rep("K-Means", repeats)
+average_method <-rep("Average", repeats)
+wards_method <-rep("Ward's", repeats)
+
+# Creating the Method column in your dataframe
+method_column <- c(complete_method, kmeans_method, average_method, wards_method)
+
+# Your existing Cluster and DBI_score columns
+cluster_column <- rep(c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"), length.out = length(method_column))
+
+# Define the number of rows you need
 avg_widths <- data.frame(
-  Method = c("Complete", "Complete", "Complete", "Complete", "K-Means", "K-Means", "K-Means", "K-Means"),
-  Cluster = c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"),
+  Method = c(complete_method, kmeans_method, average_method, wards_method),
+  # Your existing Cluster and DBI_score columns
+  Cluster = rep(c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"), length.out = length(method_column)),
   Sil_score = c(
+    sil_widths_sc2, sil_widths_sc3, sil_widths_sc4, sil_widths_sc5,
     sil_widths_sk2, sil_widths_sk3, sil_widths_sk4, sil_widths_sk5,
-    sil_widths_sk6, sil_widths_sk7, sil_widths_sk8, sil_widths_sk9
+    sil_widths_sa2, sil_widths_sa3, sil_widths_sa4, sil_widths_sa5,
+    sil_widths_sw2, sil_widths_sw3, sil_widths_sw4, sil_widths_sw5
   )
 )
 
