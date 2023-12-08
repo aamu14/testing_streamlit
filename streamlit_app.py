@@ -279,3 +279,7 @@ st.markdown("""---""")
 #show characteristic
 data7 = pd.read_csv("characteristic.csv")
 st.dataframe(data7, height=500)
+
+#dendogram
+st.markdown("""Cluster Dendogram""")
+st.image("cluster_dend.png")
