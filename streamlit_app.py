@@ -247,7 +247,7 @@ st.markdown("""
 process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
 st.write(result1)
-col9, col10 = st.columns(2)
+col9, col10, col11, col12 = st.columns(4)
 # Displaying the saved image in Streamlit
 with col9:
     # Read the Excel file into a DataFrame
@@ -257,3 +257,11 @@ with col10:
     # Read the Excel file into a DataFrame
     data3 = pd.read_csv("calinhara.csv")
     st.dataframe(data3, height=300)
+with col11:
+    # Read the Excel file into a DataFrame
+    data5 = pd.read_csv("dbi.csv")
+    st.dataframe(data5, height=300)
+with col12:
+    # Read the Excel file into a DataFrame
+    data6 = pd.read_csv("dunn.csv")
+    st.dataframe(data6, height=300)
