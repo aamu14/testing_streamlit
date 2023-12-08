@@ -55,7 +55,7 @@ sil_widths_sk9 <- mean(sk9[, "sil_width"])
 avg_widths <- data.frame(
   Method = c("Complete", "Complete", "Complete", "Complete", "K-Means", "K-Means", "K-Means", "K-Means"),
   Cluster = c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"),
-  Average_Silhouette_Width = c(
+  Sil_score = c(
     sil_widths_sk2, sil_widths_sk3, sil_widths_sk4, sil_widths_sk5,
     sil_widths_sk6, sil_widths_sk7, sil_widths_sk8, sil_widths_sk9
   )
