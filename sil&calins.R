@@ -180,4 +180,4 @@ colnames(result)[-1] <- paste("Kluster", colnames(result)[-1])
 # Rename the 'variable' column to 'Variabel'
 colnames(result)[1] <- "Variabel"
 # Assuming 'result' is your final dataframe
-write.csv(result, file = "D:/testing streamlit/characteristic.csv", row.names = FALSE)
+write.csv(result, file = "characteristic.csv", row.names = FALSE)
