@@ -7,9 +7,9 @@ suppressMessages(library(dplyr))
 library(reshape2)
 
 # Get content into a data frame
-df <- read.csv("datatest.csv",
+df_real <- read.csv("datatest.csv",
                 header = TRUE, sep = ",")
-df <- df[,-1]
+df <- df_real[,-1]
 # Scale the data
 z <- scale(df)
 # Calculate Euclidean distance
@@ -169,7 +169,7 @@ calinhara_df_sorted <- df_calinski %>% arrange(desc(Calinski_value))
 write.csv(calinhara_df_sorted, file = "calinhara.csv", row.names = FALSE)
 
 #show the characteristic of complete linkage
-t<-aggregate(Data_Per_Kecamatan_Bandar_Lampung[,-c(1,1)],list(clusterCut_3),mean)
+t<-aggregate(df_real[,-c(1,1)],list(clusterCut_3),mean)
 
 library(reshape2)
 
