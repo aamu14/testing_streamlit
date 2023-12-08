@@ -97,13 +97,10 @@ wards_method <-rep("Ward's", repeats)
 # Creating the Method column in your dataframe
 method_column <- c(complete_method, kmeans_method, average_method, wards_method)
 
-# Your existing Cluster and DBI_score columns
-cluster_column <- rep(c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"), length.out = length(method_column))
-
 # Define the number of rows you need
 avg_widths <- data.frame(
   Method = c(complete_method, kmeans_method, average_method, wards_method),
-  # Your existing Cluster and DBI_score columns
+  # Your existing Cluster and sil_score columns
   Cluster = rep(c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"), length.out = length(method_column)),
   Sil_score = c(
     sil_widths_sc2, sil_widths_sc3, sil_widths_sc4, sil_widths_sc5,
