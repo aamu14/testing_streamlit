@@ -50,9 +50,9 @@ clusterCut_13<-cutree(hc.a,5)
 
 #silhouette average
 sa2 <-silhouette(clusterCut_10,distance)
-sa3 <-silhouette(clusterCut_10,distance)
-sa4 <-silhouette(clusterCut_10,distance)
-sa5 <-silhouette(clusterCut_10,distance)
+sa3 <-silhouette(clusterCut_11,distance)
+sa4 <-silhouette(clusterCut_12,distance)
+sa5 <-silhouette(clusterCut_13,distance)
 
 #ward's
 hc.w<- hclust(distance, method = "ward.D")
