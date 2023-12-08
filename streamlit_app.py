@@ -283,3 +283,6 @@ st.dataframe(data7, height=500)
 #dendogram
 st.markdown("""Cluster Dendogram""")
 st.image("cluster_dend.png")
+
+st.markdown("""Cluster Dendogram""")
+st.image("Keterangan Peta.png")
