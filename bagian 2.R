@@ -1,6 +1,6 @@
 library(readxl)
 library(cluster)
-library(factoextra, quietly = T)
+suppressPackageStartupMessages(library("factoextra"))
 library(fpc)
 library(knitr)
 
