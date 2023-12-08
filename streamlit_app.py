@@ -49,7 +49,7 @@ st.markdown("""---""")
 st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
 
 # Secara Keseluruhan Penggunaan
-    ikelompok = st.selectbox('Observasi Berdasarkan Tingkat',
+ikelompok = st.selectbox('Observasi Berdasarkan Tingkat',
                                ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'])
     if ikelompok == 'Jumlah':
         st.header('Untuk Sekolah Tingkat TK/RA')
