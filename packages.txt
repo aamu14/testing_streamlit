@@ -6,3 +6,4 @@ r-cran-factoextra
 r-cran-fpc
 r-cran-knitr
 r-cran-dplyr
+r-cran-reshape
