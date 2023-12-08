@@ -250,7 +250,6 @@ st.markdown("""
             """)
 process1 = subprocess.Popen(["Rscript", "sil&calins.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
-st.write(result1)
 col9, col10, col11, col12 = st.columns(4)
 # Displaying the saved image in Streamlit
 with col9:
