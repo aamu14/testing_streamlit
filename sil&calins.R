@@ -181,3 +181,9 @@ colnames(result)[-1] <- paste("Kluster", colnames(result)[-1])
 colnames(result)[1] <- "Variabel"
 # Assuming 'result' is your final dataframe
 write.csv(result, file = "characteristic.csv", row.names = FALSE)
+
+#show dendogram
+png("cluster_dend.png", width = 800, height = 600)  # Specify file path and dimensions
+plot(hc.c, labels = df_real$Kecamatan, cex = 0.7)  # Plot with labels
+dev.off()  # Close the PNG device
+
