@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 from st_aggrid import AgGrid
-showWarningOnDirectExecution = false
+
 # Configure
 st.set_page_config(
     page_title="Project Intern BPS Kota Bandar Lampung",
@@ -248,6 +248,7 @@ st.markdown("""
 col9, col10 = st.columns(2)
 # Displaying the saved image in Streamlit
 with col9:
+    showWarningOnDirectExecution = false
     process1 = subprocess.Popen(["Rscript", "bagian 1 kmeans.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     result1 = process1.communicate()
     st.write(result1)
@@ -256,6 +257,7 @@ with col9:
     st.dataframe(data4, height=300, width=600)
 
 with col10:
+    showWarningOnDirectExecution = false
     process2 = subprocess.Popen(["Rscript", "bagian 2.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     result2 = process2.communicate()
     st.write(result2)
