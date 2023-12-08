@@ -3,7 +3,7 @@ library(cluster, quietly = T)
 suppressMessages(library("factoextra"))
 library(fpc, quietly = T)
 library(knitr, quietly = T)
-
+suppressMessages(library(dplyr))
 # Get content into a data frame
 df <- read.csv("datatest.csv",
                 header = TRUE, sep = ",")
@@ -110,8 +110,10 @@ avg_widths <- data.frame(
   )
 )
 
+# Arrange the dataframe by calinhara in descending order
+sill_df_sorted <- dunn_df %>% arrange(desc(Sil_score))
 # Saving the dataframe into a CSV file named 'silhouette.csv'
-write.csv(avg_widths, file = "silhouette.csv", row.names = FALSE)
+write.csv(sill_df_sorted, file = "silhouette.csv", row.names = FALSE)
 
 
 #for calinhara
@@ -159,5 +161,7 @@ dataconvert <- data.frame(
     w_ca2, w_ca3, w_ca4, w_ca5
   )
 )
+# Arrange the dataframe by calinhara in descending order
+calinhara_df_sorted <- dunn_df %>% arrange(desc(Calinski_value))
 # Saving the dataframe into a CSV file named 'calinhara.csv'
-write.csv(dataconvert, file = "calinhara.csv", row.names = FALSE)
+write.csv(calinhara_df_sorted, file = "calinhara.csv", row.names = FALSE)
