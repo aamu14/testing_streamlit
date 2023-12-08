@@ -153,7 +153,7 @@ dataconvert <- data.frame(
   Method = c(complete_method, kmeans_method, average_method, wards_method),
   # Your existing Cluster and DBI_score columns
   Cluster = rep(c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"), length.out = length(method_column)),
-  Sil_score = c(
+  Calinski_value = c(
     c_ca2, c_ca3, c_ca4, c_ca5,
     k_ca2, k_ca3, k_ca4, k_ca5,
     a_ca2, a_ca3, a_ca4, a_ca5,
