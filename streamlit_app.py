@@ -221,17 +221,16 @@ else:
 st.markdown("""---""")
 
  #Header 2
-
 st.header('Observasi Jumlah Sekolah, Jumlah Guru, dan Jumlah Murid')
 
 # Secara Keseluruhan Penggunaan
-ikelompok = st.selectbox('Observasi Berdasarkan Tingkat',
+ikelompok1 = st.selectbox('Observasi Berdasarkan Tingkat',
                                ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'])
-if ikelompok == 'TK/RA':
+if ikelompok1 == 'TK/RA':
     st.image("fig5.png")
-elif ikelompok == 'SD/MI':
+elif ikelompok1 == 'SD/MI':
     st.image("fig6.png")
-elif ikelompok == 'SMP/MTs':
+elif ikelompok1 == 'SMP/MTs':
     st.image("fig7.png")
 else:
     st.image("fig8.png")
