@@ -157,7 +157,7 @@ dataconvert <- data.frame(
     c_ca2, c_ca3, c_ca4, c_ca5,
     k_ca2, k_ca3, k_ca4, k_ca5,
     a_ca2, a_ca3, a_ca4, a_ca5,
-    w_ca2, w_ca2, w_ca2, w_ca2
+    w_ca2, w_ca3, w_ca4, w_ca5
   )
 )
 # Saving the dataframe into a CSV file named 'calinhara.csv'
