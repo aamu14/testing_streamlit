@@ -43,7 +43,7 @@ sk5 <-silhouette(clusterCut_9$cluster,distance)
 
 #average
 hc.a<- hclust(distance, method = "average")
-clusterCut_10<-cutree(hc.a,2);clusterCut_2
+clusterCut_10<-cutree(hc.a,2)
 clusterCut_11<-cutree(hc.a,3)
 clusterCut_12<-cutree(hc.a,4)
 clusterCut_13<-cutree(hc.a,5)
@@ -67,7 +67,6 @@ sw3 <-silhouette(clusterCut_15,distance)
 sw4 <-silhouette(clusterCut_16,distance)
 sw5 <-silhouette(clusterCut_17,distance)
 
-
 # Extracting silhouette widths and calculating averages
 sil_widths_sc2 <- mean(sc2[, "sil_width"])
 sil_widths_sc3 <- mean(sc3[, "sil_width"])
@@ -86,7 +85,6 @@ sil_widths_sw3 <- mean(sw3[, "sil_width"])
 sil_widths_sw4 <- mean(sw4[, "sil_width"])
 sil_widths_sw5 <- mean(sw5[, "sil_width"])
 # Creating dataframes for each cluster
-
 # Generating repeated sequences for each method
 repeats <- 4
 complete_method <- rep("Complete", repeats)
@@ -119,25 +117,48 @@ write.csv(avg_widths, file = "silhouette.csv", row.names = FALSE)
 
 #for calinhara
 #calinhara for complete
-c_a1<-calinhara(z,clusterCut_2)
-c_a2<-calinhara(z,clusterCut_3)
-c_a3<-calinhara(z,clusterCut_4)
-c_a4<-calinhara(z,clusterCut_5)
+c_ca2<-calinhara(z,clusterCut_2)
+c_ca3<-calinhara(z,clusterCut_3)
+c_ca4<-calinhara(z,clusterCut_4)
+c_ca5<-calinhara(z,clusterCut_5)
 
 #calinhara for kmeans
-k_ca1<-calinhara(z,clusterCut_6$cluster)
-k_ca2<-calinhara(z,clusterCut_7$cluster)
-k_ca3<-calinhara(z,clusterCut_8$cluster)
-k_ca4<-calinhara(z,clusterCut_9$cluster)
+k_ca2<-calinhara(z,clusterCut_6$cluster)
+k_ca3<-calinhara(z,clusterCut_7$cluster)
+k_ca4<-calinhara(z,clusterCut_8$cluster)
+k_ca5<-calinhara(z,clusterCut_9$cluster)
+
+#calinhara for average
+a_ca2<-calinhara(z,clusterCut_10)
+a_ca3<-calinhara(z,clusterCut_11)
+a_ca4<-calinhara(z,clusterCut_12)
+a_ca5<-calinhara(z,clusterCut_13)
+
+#calinhara for wards
+w_ca2<-calinhara(z,clusterCut_14)
+w_ca3<-calinhara(z,clusterCut_15)
+w_ca4<-calinhara(z,clusterCut_16)
+w_ca5<-calinhara(z,clusterCut_17)
 
 # Creating a dataframe
+# Creating dataframes for each cluster
+# Generating repeated sequences for each method
+repeats <- 4
+complete_method <- rep("Complete", repeats)
+kmeans_method <- rep("K-Means", repeats)
+average_method <-rep("Average", repeats)
+wards_method <-rep("Ward's", repeats)
+
 dataconvert <- data.frame(
-  Method = c("Complete", "Complete", "Complete", "Complete", "K-Means", "K-Means", "K-Means", "K-Means"),
-  Metric = c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"),
-  Calinhara = c(c_a1, c_a2, c_a3, c_a4, k_ca1, k_ca2, k_ca3, k_ca4)
+  Method = c(complete_method, kmeans_method, average_method, wards_method),
+  # Your existing Cluster and DBI_score columns
+  Cluster = rep(c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"), length.out = length(method_column)),
+  Sil_score = c(
+    c_ca2, c_ca3, c_ca4, c_ca5,
+    k_ca2, k_ca3, k_ca4, k_ca5,
+    a_ca2, a_ca3, a_ca4, a_ca5,
+    k_ca2, k_ca2, k_ca2, k_ca2
+  )
 )
-
-# Your previous code to create the dataframe 'dataconvert'
-
 # Saving the dataframe into a CSV file named 'calinhara.csv'
 write.csv(dataconvert, file = "calinhara.csv", row.names = FALSE)
