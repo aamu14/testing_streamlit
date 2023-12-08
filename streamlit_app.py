@@ -50,7 +50,7 @@ st.header('Observasi Luas Daerah, Kepadatan Penduduk, dan Jumlah Sekolah')
 
 # Secara Keseluruhan Penggunaan
 ikelompok = st.selectbox('Observasi Berdasarkan Tingkat',
-                               ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'])
+                               ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'], key="kelompok 1")
 if ikelompok == 'TK/RA':
     st.image("fig1.png")
 elif ikelompok == 'SD/MI':
@@ -224,13 +224,13 @@ st.markdown("""---""")
 st.header('Observasi Jumlah Sekolah, Jumlah Guru, dan Jumlah Murid')
 
 # Secara Keseluruhan Penggunaan
-ikelompok1 = st.selectbox('Observasi Berdasarkan Tingkat',
-                               ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'])
-if ikelompok1 == 'TK/RA':
+ikelompok2 = st.selectbox('Observasi Berdasarkan Tingkat',
+                               ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'], key="Kelompok 2")
+if ikelompok2 == 'TK/RA':
     st.image("fig5.png")
-elif ikelompok1 == 'SD/MI':
+elif ikelompok2 == 'SD/MI':
     st.image("fig6.png")
-elif ikelompok1 == 'SMP/MTs':
+elif ikelompok2 == 'SMP/MTs':
     st.image("fig7.png")
 else:
     st.image("fig8.png")
