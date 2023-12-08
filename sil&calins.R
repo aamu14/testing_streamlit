@@ -4,6 +4,8 @@ suppressMessages(library("factoextra"))
 library(fpc, quietly = T)
 library(knitr, quietly = T)
 suppressMessages(library(dplyr))
+library(reshape2)
+
 # Get content into a data frame
 df <- read.csv("datatest.csv",
                 header = TRUE, sep = ",")
@@ -165,3 +167,17 @@ df_calinski <- data.frame(
 calinhara_df_sorted <- df_calinski %>% arrange(desc(Calinski_value))
 # Saving the dataframe into a CSV file named 'calinhara.csv'
 write.csv(calinhara_df_sorted, file = "calinhara.csv", row.names = FALSE)
+
+#show the characteristic of complete linkage
+t<-aggregate(Data_Per_Kecamatan_Bandar_Lampung[,-c(1,1)],list(clusterCut_3),mean)
+
+library(reshape2)
+
+# Assuming your 't' dataframe is named 'result'
+result <- dcast(melt(as.data.frame(t), id.vars = "Group.1"), variable ~ Group.1)
+# Rename the columns to match your desired format
+colnames(result)[-1] <- paste("Kluster", colnames(result)[-1])
+# Rename the 'variable' column to 'Variabel'
+colnames(result)[1] <- "Variabel"
+# Assuming 'result' is your final dataframe
+write.csv(result, file = "D:/testing streamlit/characteristic.csv", row.names = FALSE)
