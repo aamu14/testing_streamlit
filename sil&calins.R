@@ -15,6 +15,16 @@ distance <- dist(z)
 hc.c<-hclust(distance)
 #plot(hc.c, labels=Data_Per_Kecamatan_Bandar_Lampung$Kecamatan,cex=.7)
 #complete linkage
+
+#kmeans
+kc2<- kmeans(z,2)
+kc3<- kmeans(z,3)
+kc4<- kmeans(z,4)
+kc5<- kmeans(z,5)
+clusterCut_6<-kc2
+clusterCut_7<-kc3
+clusterCut_8<-kc4
+clusterCut_9<-kc5
 #set the cluster we needed. in this case, i use cluster between 2 to 5.
 clusterCut_2<-cutree(hc.c,2)
 clusterCut_3<-cutree(hc.c,3)
@@ -26,15 +36,7 @@ sc3 <-silhouette(clusterCut_3,distance)
 sc4 <-silhouette(clusterCut_4,distance)
 sc5 <-silhouette(clusterCut_5,distance)
 
-#kmeans
-kc2<- kmeans(z,2)
-kc3<- kmeans(z,3)
-kc4<- kmeans(z,4)
-kc5<- kmeans(z,5)
-clusterCut_6<-kc2
-clusterCut_7<-kc3
-clusterCut_8<-kc4
-clusterCut_9<-kc5
+
 #silhouette kmeans
 sk2 <-silhouette(clusterCut_6$cluster,distance)
 sk3 <-silhouette(clusterCut_7$cluster,distance)
