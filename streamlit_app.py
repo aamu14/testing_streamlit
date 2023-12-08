@@ -234,7 +234,6 @@ elif ikelompok1 == 'SMP/MTs':
     st.image("fig7.png")
 else:
     st.image("fig8.png")
-
 # Horizontal Divider
 st.markdown("""---""")
 
