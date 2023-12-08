@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 from st_aggrid import AgGrid
+showWarningOnDirectExecution = false
 # Configure
 st.set_page_config(
     page_title="Project Intern BPS Kota Bandar Lampung",
