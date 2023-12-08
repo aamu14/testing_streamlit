@@ -98,7 +98,7 @@ wards_method <-rep("Ward's", repeats)
 method_column <- c(complete_method, kmeans_method, average_method, wards_method)
 
 # Define the number of rows you need
-avg_widths <- data.frame(
+df_sill <- data.frame(
   Method = c(complete_method, kmeans_method, average_method, wards_method),
   # Your existing Cluster and sil_score columns
   Cluster = rep(c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"), length.out = length(method_column)),
@@ -111,7 +111,7 @@ avg_widths <- data.frame(
 )
 
 # Arrange the dataframe by calinhara in descending order
-sill_df_sorted <- dunn_df %>% arrange(desc(Sil_score))
+sill_df_sorted <- df_sill %>% arrange(desc(Sil_score))
 # Saving the dataframe into a CSV file named 'silhouette.csv'
 write.csv(sill_df_sorted, file = "silhouette.csv", row.names = FALSE)
 
@@ -150,7 +150,7 @@ kmeans_method <- rep("K-Means", repeats)
 average_method <-rep("Average", repeats)
 wards_method <-rep("Ward's", repeats)
 
-dataconvert <- data.frame(
+df_calinski <- data.frame(
   Method = c(complete_method, kmeans_method, average_method, wards_method),
   # Your existing Cluster and DBI_score columns
   Cluster = rep(c("Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"), length.out = length(method_column)),
@@ -162,6 +162,6 @@ dataconvert <- data.frame(
   )
 )
 # Arrange the dataframe by calinhara in descending order
-calinhara_df_sorted <- dunn_df %>% arrange(desc(Calinski_value))
+calinhara_df_sorted <- df_calinski %>% arrange(desc(Calinski_value))
 # Saving the dataframe into a CSV file named 'calinhara.csv'
 write.csv(calinhara_df_sorted, file = "calinhara.csv", row.names = FALSE)
