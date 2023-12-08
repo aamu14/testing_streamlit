@@ -223,24 +223,18 @@ st.markdown("""---""")
  #Header 2
 
 st.header('Observasi Jumlah Sekolah, Jumlah Guru, dan Jumlah Murid')
-col5, col6 = st.columns(2)
-# Displaying the saved image in Streamlit
-with col5:
-   st.header('Untuk Sekolah Tingkat TK/RA')
-   st.image("fig5.png")
 
-with col6:
-   st.header("Untuk Tingkat SD/MI")
-   st.image("fig6.png")
-    
-col7, col8 = st.columns(2)
-with col7:
-   st.header("Untuk Tingkat SMP/MTs")
-   st.image("fig7.png")
-
-with col8:
-   st.header("Untuk Tingkat SMA/SMK/MA")
-   st.image("fig8.png")
+# Secara Keseluruhan Penggunaan
+ikelompok = st.selectbox('Observasi Berdasarkan Tingkat',
+                               ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'])
+if ikelompok == 'TK/RA':
+    st.image("fig5.png")
+elif ikelompok == 'SD/MI':
+    st.image("fig6.png")
+elif ikelompok == 'SMP/MTs':
+    st.image("fig7.png")
+else:
+    st.image("fig8.png")
 
 # Horizontal Divider
 st.markdown("""---""")
