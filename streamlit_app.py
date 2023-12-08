@@ -231,8 +231,6 @@ with col8:
 # Horizontal Divider
 st.markdown("""---""")
 
-
-
 st.subheader('Melakukan Analisis Cluster (Clustering)')
 st.markdown("""
             Langkah selanjutnya adalah melakukan Clustering. Ada 2 jenis metode clustering yang akan digunakan, yaitu hierarchical dan non-hierarchical. metode hierarchical yang akan digunakan adalah K-means, sedangkan metode non-hierarchical yang akan digunakan adalah average linkage; complete linkage; ward's method.  Adapun tahapannya adalah sebagai berikut:
@@ -277,3 +275,7 @@ with col12:
     # Read the Excel file into a DataFrame
     data6 = pd.read_csv("dunn.csv")
     st.dataframe(data6, height=300)
+st.markdown("""---""")
+#show characteristic
+data7 = pd.read_csv("characteristic.csv")
+st.dataframe(data7, height=500)
