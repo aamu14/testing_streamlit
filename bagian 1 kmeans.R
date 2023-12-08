@@ -1,8 +1,8 @@
-library(readxl)
-library(cluster)
-library(factoextra)
-library(fpc)
-library(knitr)
+library(readxl, quietly = T)
+library(cluster, quietly = T)
+library(factoextra, quietly = T)
+library(fpc, quietly = T)
+library(knitr, quietly = T)
 
 # Get content into a data frame
 df <- read.csv("datatest.csv",
