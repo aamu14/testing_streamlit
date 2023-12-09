@@ -249,12 +249,24 @@ ikelompok2 = st.selectbox('Observasi Berdasarkan Tingkat',
                                ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'], key="Kelompok 2")
 if ikelompok2 == 'TK/RA':
     st.image("fig5.png")
+    st.markdown("""
+    Berdasarkan gambar di bawah, dapat dilihat bahwa banyaknya murid dan guru sebanding dengan jumlah sekolah di setiap kecamatan. Semakin banyak jumlah sekolah di tingkat TK/RA, maka jumlah murid dan guru di tingkat TK/RA akan meningkat, begitu juga sebaliknya.
+    """)
 elif ikelompok2 == 'SD/MI':
     st.image("fig6.png")
+    st.markdown("""
+    Berdasarkan gambar di atas, dapat dilihat bahwa banyaknya murid dan guru sebanding dengan jumlah sekolah di setiap kecamatan. Semakin banyak jumlah sekolah di tingkat SD/MI, maka jumlah murid dan guru di tingkat SD/MI akan meningkat, begitu juga sebaliknya.
+    """)
 elif ikelompok2 == 'SMP/MTs':
     st.image("fig7.png")
+    st.markdown("""
+    Berdasarkan gambar di atas, dapat dilihat bahwa banyaknya murid dan guru sebanding dengan jumlah sekolah di setiap kecamatan. Semakin banyak jumlah sekolah di tingkat SMP/MTs, maka jumlah murid dan guru di tingkat SMP/MTs akan meningkat, begitu juga sebaliknya.
+    """)
 else:
     st.image("fig8.png")
+    st.markdown("""
+    Berdasarkan gambar di atas, dapat dilihat bahwa banyaknya murid dan guru sebanding dengan jumlah sekolah di setiap kecamatan. Semakin banyak jumlah sekolah di tingkat SMA/SMK/MA, maka jumlah murid dan guru di tingkat SMA/SMK/MA akan meningkat, begitu juga sebaliknya.
+    """)
 # Horizontal Divider
 st.markdown("""---""")
 
