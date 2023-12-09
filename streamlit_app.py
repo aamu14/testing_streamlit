@@ -62,6 +62,9 @@ ikelompok = st.selectbox('Observasi Berdasarkan Tingkat',
                                ['TK/RA', 'SD/MI', 'SMP/MTs', 'SMA/SMK/MA'], key="kelompok 1")
 if ikelompok == 'TK/RA':
     st.image("fig1.png")
+    st.markdown("""
+    Berdasarkan gambar di atas, terdapat beberapa hal yang menarik untuk diperhatikan. Pertama, jumlah TK/RA paling sedikit ada di Kecamatan Enggal dan Teluk Betuk Barat (TBB) dengan jumlah 8 sekolah. Kedua, Kecamatan Kemiling memiliki jumlah sekolah di tingkat TK/RA terbanyak, yaitu 47 sekolah dengan kepadatan penduduk yang kecil yaitu 3,792 dan daerah yang luas yaitu sebesar 24,24 km2. Ketiga, Kecamatan Bumi Waras dan Tanjung Karang Timur (TKT) adalah daerah dengan jumlah TK/RA yang cukup sedikit, yaitu masing-masing sebanyak 11 dan 10 sekolah. Tetapi, kepadatan penduduknya cukup besar dengan luas daerah yang kecil.
+    """
 elif ikelompok == 'SD/MI':
     st.image("fig2.png")
 elif ikelompok == 'SMP/MTs':
