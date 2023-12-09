@@ -345,3 +345,13 @@ st.markdown("""
 st.subheader("""Visualisasi dari Kluster""")
 st.image("Keterangan Peta.png")
 
+st.header('Kesimpulan & Saran'
+         )
+st.subheader('Kesimpulan'
+            )
+################################
+st.subheader('Saran'
+            )
+#################################
+st.header('Catatan'
+         )
