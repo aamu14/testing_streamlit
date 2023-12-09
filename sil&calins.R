@@ -38,7 +38,6 @@ sc3 <-silhouette(clusterCut_3,distance)
 sc4 <-silhouette(clusterCut_4,distance)
 sc5 <-silhouette(clusterCut_5,distance)
 
-
 #silhouette kmeans
 sk2 <-silhouette(clusterCut_6$cluster,distance)
 sk3 <-silhouette(clusterCut_7$cluster,distance)
@@ -52,11 +51,6 @@ clusterCut_11<-cutree(hc.a,3)
 clusterCut_12<-cutree(hc.a,4)
 clusterCut_13<-cutree(hc.a,5)
 
-#silhouette average
-sa2 <-silhouette(clusterCut_10,distance)
-sa3 <-silhouette(clusterCut_11,distance)
-sa4 <-silhouette(clusterCut_12,distance)
-sa5 <-silhouette(clusterCut_13,distance)
 
 #ward's
 hc.w<- hclust(distance, method = "ward.D")
@@ -64,6 +58,12 @@ clusterCut_14<-cutree(hc.w,2)
 clusterCut_15<-cutree(hc.w,3)
 clusterCut_16<-cutree(hc.w,4)
 clusterCut_17<-cutree(hc.w,5)
+
+#silhouette average
+sa2 <-silhouette(clusterCut_10,distance)
+sa3 <-silhouette(clusterCut_11,distance)
+sa4 <-silhouette(clusterCut_12,distance)
+sa5 <-silhouette(clusterCut_13,distance)
 
 #silhouette ward's
 sw2 <-silhouette(clusterCut_14,distance)
