@@ -184,6 +184,9 @@ write.csv(result, file = "characteristic.csv", row.names = FALSE)
 
 #show dendogram
 png("cluster_dend.png", width = 800, height = 600)  # Specify file path and dimensions
-plot(hc.c, labels = df_real$Kecamatan, cex = 1.5)  # Plot with labels
+plot(hc.c, labels = df_real$Kecamatan, cex = 1.5)
+# Adding a horizontal line at y = 3
+abline(h = 7.5, col = "darkgreen", lty = 1, lwd = 1.5) # Adjust color and line type as needed
+# Plot with labels
 dev.off()  # Close the PNG device
 
