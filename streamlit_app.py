@@ -313,11 +313,24 @@ with col12:
     # Read the Excel file into a DataFrame
     data6 = pd.read_csv("dunn.csv")
     st.dataframe(data6, height=300)
+st.markdown(""" Terpilih complete linkage dengan 3 kluster""")
 st.markdown("""---""")
 #show characteristic
 data7 = pd.read_csv("characteristic.csv")
 st.dataframe(data7, height=500)
+st.markdown("""
+    Tabel tersebut mewakili bagaimana karakteristik dari setiap kluster. 
+    Metode terbaik yang dipilih adalah metode hierarchical (agglomerative) clustering khususnya pada metode complete linkage dengan tiga kluster. Hal ini dapat disebabkan karena metode lainnya tidak memenuhi kriteria lebih dari satu metrik. Selain itu, metode non-hierarchical (k-mean) yang sebelumnya memenuhi tiga metrik, dipengaruhi oleh adanya indikasi pencilan pada data. Sehingga, k-mean tidak lebih unggul daripada metode complete linkage. 
 
+Kluster 1 memiliki luas daerah yang tidak terlalu besar dan tidak terlalu kecil, kepadatan penduduknya  tertinggi, variabel (jumlah sekolah, jumlah guru, dan jumlah murid) di tingkat TK/RA dan SD/MI berada di antara kluster 2 dan 3, sedangkan variabel (jumlah sekolah, jumlah guru, dan jumlah murid) di tingkat SMP/MTs dan SMA/SMK/MA memiliki nilai yang paling sedikit. Hal ini menandakan bahwa kluster 1 adalah daerah yang padat dengan penduduk yang cukup fokus terhadap kebutuhan pendidikan (khususnya di tingkat TK/RA dan SD/MI) dan tidak terlalu fokus pada tingkat yang lebih tinggi. 
+
+Kluster 2 memiliki luas daerah terkecil, kepadatan penduduk yang cukup besar, variabel (jumlah sekolah, jumlah guru, dan jumlah murid) di tingkat TK/RA dan SD/MI memiliki nilai yang terkecil, variabel jumlah sekolah di tingkat SMP/MTs dan SMA/SMK/MA memiliki nilai yang cukup besar, lalu jumlah murid dan guru di tingkat SMP/MTs dan SMA/SMK/MA memiliki nilai tertinggi. Jika membandingkan besarnya luas daerah dengan variabel pendidikan yang ada, maka hal ini menandakan bahwa pada kluster ini fokus pada pendidikan (khususnya di tingkat SMP/MTs dan SMA/SMK/MA).
+
+Kluster 3 adalah kluster yang memiliki luas daerah yang terbesar, tetapi kepadatan penduduk yang sangat kecil. Hal ini menandakan bahwa daerah pada kluster ini memiliki sedikit wilayah yang dihuni oleh masyarakat. Selain itu, variabel pendidikan pada kluster ini memiliki nilai yang tinggi dibandingkan dengan kluster 1 dan 2. Hal ini menjadikan kluster 3 adalah daerah yang sangat fokus pada pendidikan.
+
+Lalu dapat diperhatikan bahwa terdapat beberapa kecamatan yang seharusnya berada pada kluster dengan daerah yang terbesar, tetapi terletak pada kluster yang berbeda. Hal ini disebabkan karena analisis kluster dilakukan dengan menggunakan karakteristik secara umum, tidak untuk mendefinisikan satu daerah saja. Selain itu, hal ini juga dapat disebabkan karena nilai pada pengecekan masing-masing metrik yang tidak terlalu besar, sehingga masih terdapat kemungkinan hasilnya terdapat bias.
+
+""")
 #dendogram
 st.markdown("""Cluster Dendogram""")
 st.image("cluster_dend.png")
