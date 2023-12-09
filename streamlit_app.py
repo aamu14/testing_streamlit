@@ -353,9 +353,9 @@ st.subheader('Kesimpulan'
 st.subheader('Saran'
             )
 #################################
-st.divider()
+st.markdown("""---""")
 st.caption('CATATAN \n')
-st.divider()
+st.markdown("""---""")
 st.caption('SARAN UNTUK PENELITIAN LEBIH LANJUT  \n'
                'Perlu diingat bahwa data yang digunakan adalah data posisi pemberian kredit berdasarkan jenis '
                'penggunaan dalam skala nasional.  \n'
