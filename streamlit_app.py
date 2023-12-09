@@ -270,7 +270,7 @@ else:
 # Horizontal Divider
 st.markdown("""---""")
 
-st.subheader('Melakukan Analisis Cluster (Clustering)')
+st.header('Melakukan Analisis Cluster (Clustering)')
 st.markdown("""
             Langkah selanjutnya adalah melakukan Clustering. Ada 2 jenis metode clustering yang akan digunakan, yaitu hierarchical dan non-hierarchical. metode hierarchical yang akan digunakan adalah K-means, sedangkan metode non-hierarchical yang akan digunakan adalah average linkage; complete linkage; ward's method.  Adapun tahapannya adalah sebagai berikut:
             1. melakukan normalisasi data (jika dibutuhkan) dan menghitung jarak euclidean.
@@ -281,6 +281,8 @@ st.markdown("""
             6. menampilkan cluster dendogram dari metode cluster yang terpilih
             7. melakukan visualisasi dari metode cluster yang terpilih
             """)
+st.subheader('Menentukan Jumlah Kluster Terbaik dengan Uji Menggunakan Beberapa Metrik'
+            )
 process1 = subprocess.Popen(["Rscript", "sil&calins.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
 col9, col10, col11, col12 = st.columns(4)
@@ -313,9 +315,10 @@ with col12:
     # Read the Excel file into a DataFrame
     data6 = pd.read_csv("dunn.csv")
     st.dataframe(data6, height=300)
-st.markdown(""" Terpilih complete linkage dengan 3 kluster""")
+st.markdown(""" Penjelasan Terpilih complete linkage dengan 3 kluster""")
 st.markdown("""---""")
 #show characteristic
+st.subheader('Karakteristik Masing-Masing Kluster')
 data7 = pd.read_csv("characteristic.csv")
 st.dataframe(data7, height=500)
 st.markdown("""
@@ -331,13 +334,14 @@ Kluster 3 adalah kluster yang memiliki luas daerah yang terbesar, tetapi kepadat
 Lalu dapat diperhatikan bahwa terdapat beberapa kecamatan yang seharusnya berada pada kluster dengan daerah yang terbesar, tetapi terletak pada kluster yang berbeda. Hal ini disebabkan karena analisis kluster dilakukan dengan menggunakan karakteristik secara umum, tidak untuk mendefinisikan satu daerah saja. Selain itu, hal ini juga dapat disebabkan karena nilai pada pengecekan masing-masing metrik yang tidak terlalu besar, sehingga masih terdapat kemungkinan hasilnya terdapat bias.
 """)
 #dendogram
-st.markdown("""Cluster Dendogram""")
+st.subheader('Plot Cluster Dendogram'
+            )
 st.image("cluster_dend.png")
 st.markdown("""
             Dendogram tersebut menyajikan anggota kluster, dalam hal ini adalah kecamatan mana saja yang berada pada kluster 1,2, dan 3.
             Agar lebih mudah dilihat, akan dibuat visualisasi dari masing-masing kluster ke dalam bentuk peta.
 """)
 
-st.markdown("""Visualisasi dari Kluster""")
+st.subheader("""Visualisasi dari Kluster""")
 st.image("Keterangan Peta.png")
 
