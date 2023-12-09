@@ -13,13 +13,22 @@ st.set_page_config(
 st.header('🎈 R x Python Streamlit App')
 st.sidebar.markdown('''
 # About
-Testing R di Streamlit
+This project is using the combination of R, Python. Some graphs are created with Tableau. The consideration will be written on the end of this project.
 R packages used:
 - `readxl`
 - `cluster`
 - `factoextra`
 - `fpc`
-- `clusterSim`
+- `knitr`
+- `dplyr`
+- `reshape`
+Python libraries used:
+- 'streamlit==1.12.0'
+- 'matplotlib'
+- 'pandas'
+- 'pillow'
+- 'streamlit-aggrid'
+
 ''')
 st.markdown("""
             **Dataset yang digunakan terdiri dari data kecamatan, data luas daerah, dan data kependidikan yang terbagi menjadi 3, yaitu:**  
