@@ -353,5 +353,11 @@ st.subheader('Kesimpulan'
 st.subheader('Saran'
             )
 #################################
-st.header('Catatan'
-         )
+st.divider()
+st.caption('CATATAN \n')
+st.divider()
+st.caption('SARAN UNTUK PENELITIAN LEBIH LANJUT  \n'
+               'Perlu diingat bahwa data yang digunakan adalah data posisi pemberian kredit berdasarkan jenis '
+               'penggunaan dalam skala nasional.  \n'
+               'Jika menggunakan data dalam skala provinsi, akan sangat memungkinkan pada beberapa provinsi,  \n'
+               'tidak semua jenis penggunaan kredit berpengaruh secara positif terhadap pertumbuhan PDRB.')
