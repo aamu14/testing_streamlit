@@ -72,8 +72,14 @@ elif ikelompok == 'SD/MI':
     """)
 elif ikelompok == 'SMP/MTs':
     st.image("fig3.png")
+    st.markdown("""
+    Berdasarkan gambar di atas, dapat dilihat bahwa jumlah sekolah di tingkat SMP/MTs terbanyak terdapat di Kecamatan Kemiling, Rajabasa, dan Tanjung Karang Pusat (TKP) sebanyak 14 sekolah, sedangkan jumlah sekolah paling sedikit terdapat di Kecamatan Way Halim sebanyak 3 sekolah.
+    """)
 else:
     st.image("fig4.png")
+    st.markdown("""
+    Berdasarkan gambar di atas, dapat dilihat bahwa jumlah sekolah di tingkat SMA/SMK/MA terbanyak terdapat di Kecamatan Kemiling dan Sukarame sebanyak 14 sekolah, sedangkan jumlah sekolah paling sedikit terdapat di Kecamatan Way Halim sebanyak 1 sekolah.
+    """)
 
 
 #col1, col2 = st.columns(2)
