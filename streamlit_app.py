@@ -23,11 +23,11 @@ R packages used:
 - `dplyr`
 - `reshape`
 Python libraries used:
-- 'streamlit==1.12.0'
-- 'matplotlib'
-- 'pandas'
-- 'pillow'
-- 'streamlit-aggrid'
+- `streamlit==1.12.0`
+- `matplotlib`
+- `pandas`
+- `pillow`
+- `streamlit-aggrid`
 
 ''')
 st.markdown("""
