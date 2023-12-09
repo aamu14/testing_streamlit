@@ -329,11 +329,15 @@ Kluster 2 memiliki luas daerah terkecil, kepadatan penduduk yang cukup besar, va
 Kluster 3 adalah kluster yang memiliki luas daerah yang terbesar, tetapi kepadatan penduduk yang sangat kecil. Hal ini menandakan bahwa daerah pada kluster ini memiliki sedikit wilayah yang dihuni oleh masyarakat. Selain itu, variabel pendidikan pada kluster ini memiliki nilai yang tinggi dibandingkan dengan kluster 1 dan 2. Hal ini menjadikan kluster 3 adalah daerah yang sangat fokus pada pendidikan.
 
 Lalu dapat diperhatikan bahwa terdapat beberapa kecamatan yang seharusnya berada pada kluster dengan daerah yang terbesar, tetapi terletak pada kluster yang berbeda. Hal ini disebabkan karena analisis kluster dilakukan dengan menggunakan karakteristik secara umum, tidak untuk mendefinisikan satu daerah saja. Selain itu, hal ini juga dapat disebabkan karena nilai pada pengecekan masing-masing metrik yang tidak terlalu besar, sehingga masih terdapat kemungkinan hasilnya terdapat bias.
-
 """)
 #dendogram
 st.markdown("""Cluster Dendogram""")
 st.image("cluster_dend.png")
+st.markdown("""
+            Dendogram tersebut menyajikan anggota kluster, dalam hal ini adalah kecamatan mana saja yang berada pada kluster 1,2, dan 3.
+            Agar lebih mudah dilihat, akan dibuat visualisasi dari masing-masing kluster ke dalam bentuk peta.
+""")
 
-st.markdown("""Cluster Dendogram""")
+st.markdown("""Visualisasi dari Kluster""")
 st.image("Keterangan Peta.png")
+
