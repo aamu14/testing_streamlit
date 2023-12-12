@@ -406,7 +406,7 @@ st.header('Kesimpulan & Saran'
          )
 st.subheader('Kesimpulan'
             )
-st.markdown"""
+st.markdown("""
 1.	Jumlah sekolah, murid, dan guru memiliki hubungan yang sebanding. Semakin banyak sekolah, maka semakin banyak murid dan guru yang ada. Tetapi, terdapat beberapa hal yang dapat diperhatikan, seperti kecamatan yang penduduknya tidak terlalu padat tetapi daerahnya cukup luas, dan sebaliknya.
 2.	Hasil analisis kluster dengan agglomerative clustering memberikan lima rekomendasi model terbaik dan dengan k-means memberikan satu rekomendasi model terbaik. Model clustering yang dievaluasi dengan empat jenis metrik memberikan hasil bahwa metode average linkage dan complete linkage adalah metode yang terbaik dengan memberikan hasil yang sama. Oleh karena itu, hanya metode complete linkage dengan tiga kluster yang akan digunakan.
 3.	Kluster 1 adalah daerah dengan kecamatan yang cukup luas dan sangat padat penduduk, dan daerah yang cukup fokus di pendidikan tingkat TK/RA dan SD/MI. Kluster 2 adalah daerah yang kecil dengan kepadatan penduduk menengah, lalu pendidikannya berfokus pada SMP/MTs dan SMA/SMK/MA. Kluster 3 adalah daerah yang terluas tetapi sedikit penduduk dan merupakan daerah yang fokus pada pendidikan di semua tingkat.
