@@ -63,7 +63,7 @@ st.dataframe(data, height=300)
 st.markdown("""
             **Berikut adalah statistika deskriptif dari dataset yang digunakan:**  
             """)
-data_summary = df
+data_summary = data
 # Calculate summary statistics using describe()
 summary_stats = data_summary.describe().loc[['min', '25%', '50%', '75%', 'mean', 'max']]
 # Rename the index labels
