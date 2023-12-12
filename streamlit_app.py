@@ -28,6 +28,7 @@ Python libraries used:
 - `pandas`
 - `pillow`
 - `streamlit-aggrid`
+- `seaborn`
 
 ''')
 st.markdown("""
@@ -286,7 +287,8 @@ correlation_matrix = df[numerical_columns].corr()
 plt.figure(figsize=(10, 8))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
 plt.title('Correlation Matrix')
-plt.show()
+cor_graph<-plt.show()
+st.write(cor_graph)
 st.markdown("""
 Penjelasan Korelasi
 """)
