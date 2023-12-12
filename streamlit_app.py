@@ -67,7 +67,7 @@ data_summary = data
 # Calculate summary statistics using describe()
 summary_stats = data_summary.describe().loc[['min', '25%', '50%', '75%', 'mean', 'max']]
 # Rename the index labels
-summary_stats = summary_stats.rename(index={'25%': 'q1', '50%': 'median', '75%': 'q3'})
+summary_stats = summary_stats.rename(index={'min': 'Min', 'mean': 'Mean', 'max': 'Max', '25%': 'Q1', '50%': 'Median', '75%': 'Q3'})
 # Round the summary statistics to 3 decimal places
 summary_stats = summary_stats.round(2)
 st.dataframe(summary_stats, height=300)
