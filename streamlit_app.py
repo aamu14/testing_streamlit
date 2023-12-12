@@ -283,6 +283,15 @@ st.markdown("""
             """)
 st.subheader('Menentukan Jumlah Kluster Terbaik dengan Uji Menggunakan Beberapa Metrik'
             )
+st.markdown("""
+            Setiap metrik mempunyai kriterianya sendiri dalam penentuan model terbaik. Adapun kriterianya adalah:
+            1. Silhouette Score: Semakin besar nilainya, semakin baik modelnya
+            2. Calinski-Harabasz Index: Semakin besar nilainya, semakin baik modelnya
+            3. Davies Bouldin Index: Semakin kecil nilainya, semakin baik modelnya
+            4. Dunn Index: Semakin besar nilainya, semakin baik modelnya
+
+            Kriteria ini akan menentukan hasil akhir dari pengujian masing-masing metode clustering. Adapun hasilnya dapat dilihat pada tabel di bawah ini.
+""")
 process1 = subprocess.Popen(["Rscript", "sil&calins.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
 col9, col10, col11, col12 = st.columns(4)
