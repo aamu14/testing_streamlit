@@ -4,3 +4,4 @@ pandas
 pillow
 streamlit-aggrid
 streamlit.components.v1
+seaborn
