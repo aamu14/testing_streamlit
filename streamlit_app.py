@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 from st_aggrid import AgGrid
-
+import seaborn as sns
 # Configure
 st.set_page_config(
     page_title="Project Intern BPS Kota Bandar Lampung",
@@ -268,6 +268,28 @@ else:
     st.markdown("""
     Berdasarkan gambar di atas, dapat dilihat bahwa banyaknya murid dan guru sebanding dengan jumlah sekolah di setiap kecamatan. Semakin banyak jumlah sekolah di tingkat SMA/SMK/MA, maka jumlah murid dan guru di tingkat SMA/SMK/MA akan meningkat, begitu juga sebaliknya.
     """)
+
+st.header("""
+Observasi Korelasi Antar Variabel
+""")
+
+# Read the CSV file into a Pandas DataFrame
+df = pd.read_csv('datatest.csv')
+
+# Assuming the first column is text, and you want correlations only between numerical columns
+numerical_columns = df.select_dtypes(include=['float64', 'int64']).columns
+
+# Calculate the correlation matrix for numerical columns only
+correlation_matrix = df[numerical_columns].corr()
+
+# Plotting the correlation matrix as a heatmap
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
+plt.title('Correlation Matrix')
+plt.show()
+st.markdown("""
+Penjelasan Korelasi
+""")
 # Horizontal Divider
 st.markdown("""---""")
 
