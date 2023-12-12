@@ -40,7 +40,7 @@ di mana data dengan karakteristik yang mirip dikelompokkan bersama berdasarkan p
 """)
 
 st.markdown("""
-**Adapun metode clustering yang digunakan ada 2, yaitu Hierarchical Agglomerative Clustering dan Non-Hierarchical Clustering. Metode-metode yang akan digunakan adalah:**
+Adapun metode clustering yang digunakan ada 2, yaitu Hierarchical Agglomerative Clustering dan Non-Hierarchical Clustering. Metode-metode yang akan digunakan adalah:
 1. Average Linkage (Hierarchical)
 2. Complete Linkage (Hierarchical)
 3. Ward's Method (Hierarchical)
