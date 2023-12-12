@@ -59,7 +59,7 @@ st.markdown("""
             """)
 # Read the Excel file into a DataFrame
 data = pd.read_csv("datatest.csv")
-st.dataframe(data, height=300)
+st.dataframe(data)
 st.markdown("""
             **Berikut adalah statistika deskriptif dari dataset yang digunakan:**  
             """)
