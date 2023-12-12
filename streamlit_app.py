@@ -63,8 +63,14 @@ st.dataframe(data, height=300)
 st.markdown("""
             **Berikut adalah statistika deskriptif dari dataset yang digunakan:**  
             """)
-data_summary =pd.read_csv("summary.csv")
-st.dataframe(data_summary, height=300)
+data_summary = df
+# Calculate summary statistics using describe()
+summary_stats = data_summary.describe().loc[['min', '25%', '50%', '75%', 'mean', 'max']]
+# Rename the index labels
+summary_stats = summary_stats.rename(index={'25%': 'q1', '50%': 'median', '75%': 'q3'})
+# Round the summary statistics to 3 decimal places
+summary_stats = summary_stats.round(2)
+st.dataframe(summary_stats, height=300)
 st.markdown("""
 Dari tabel tersebut, terlihat bahwa ada satu kecamatan yang memiliki luas yang sangat kecil, hanya 2,03 km^2, sementara kecamatan terluas mencapai 24,24 km^2. Selanjutnya, rentang kepadatan penduduk dari yang terendah, 3336 orang per km^2, hingga tertinggi, 22018 orang per km^2. Data pendidikan mencakup berbagai tingkat sekolah yang setara, memberikan gambaran yang lebih komprehensif. Terdapat indikasi adanya beberapa nilai yang terletak jauh dari rentang nilai minimum hingga maksimum pada beberapa variabel, menunjukkan kemungkinan adanya pencilan (outlier). Keberadaan pencilan ini, meski mempengaruhi analisis, tidak dihapus karena pentingnya mempertimbangkan semua kecamatan dalam evaluasi data.
             """)
