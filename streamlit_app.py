@@ -32,8 +32,7 @@ Python libraries used:
 
 ''')
 st.markdown("""
-**
-Clustering adalah proses pengelompokan data serupa ke dalam kelompok-kelompok yang lebih kecil berdasarkan pada kesamaan karakteristik tertentu. 
+**Clustering adalah proses pengelompokan data serupa ke dalam kelompok-kelompok yang lebih kecil berdasarkan pada kesamaan karakteristik tertentu. 
 Tujuannya adalah untuk mengidentifikasi pola atau struktur dalam data yang kompleks. 
 Cara kerjanya mirip dengan mengumpulkan barang serupa ke dalam kelompok yang sama berdasarkan ciri-ciri yang mereka miliki. 
 Misalnya, dalam pengelompokan warna, objek-objek dengan warna yang mirip akan dikelompokkan bersama. Hal yang sama berlaku dalam clustering data, 
@@ -41,8 +40,7 @@ di mana data dengan karakteristik yang mirip dikelompokkan bersama berdasarkan p
 """)
 
 st.markdown("""
-**
-Adapun metode clustering yang digunakan ada 2, yaitu Hierarchical Agglomerative Clustering dan Non-Hierarchical Clustering. Metode Hierarchical Clustering dibagi menjadi 3, yaitu:**
+**Adapun metode clustering yang digunakan ada 2, yaitu Hierarchical Agglomerative Clustering dan Non-Hierarchical Clustering. Metode Hierarchical Clustering dibagi menjadi 3, yaitu:**
 1. Average Linkage
 2. Complete Linkage
 3. Ward's Method \n
