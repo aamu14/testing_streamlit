@@ -354,7 +354,12 @@ st.markdown("""
 
 st.subheader("""Visualisasi dari Kluster""")
 st.image("Keterangan Peta.png")
-
+st.markdown("""
+Hasil dendogram kluster menunjukkan bahwa terdapat 3 kluster dengan kluster pertama yang terdiri dari 16 kecamatan dan kluster kedua yang terdiri dari 1 kecamatan, dan kluster ketiga terdiri dari 3 kecamatan. Anggota dari masing-masing kluster adalah:
+1.	Kluster Pertama: Teluk Betung Barat, Teluk Betung Timur, Teluk Betung Selatan, Bumi Waras, Panjang, Tanjung Karang Timur, Kedamaian, Teluk Betung Utara, Tanjung Karang Pusat, Tanjung Karang Barat, Langkapura, Kedaton, Tanjung Senang, Labuhan Ratu, Sukabumi, Way Halim
+2.	Kluster Kedua: Enggal
+3.	Kluster Ketiga: Kemiling, Rajabasa, Sukarame
+""")
 st.header('Kesimpulan & Saran'
          )
 st.subheader('Kesimpulan'
