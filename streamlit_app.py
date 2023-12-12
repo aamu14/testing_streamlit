@@ -284,11 +284,10 @@ numerical_columns = df.select_dtypes(include=['float64', 'int64']).columns
 correlation_matrix = df[numerical_columns].corr()
 
 # Plotting the correlation matrix as a heatmap
-plt.figure(figsize=(10, 8))
+cor_graph= plt.figure(figsize=(10, 8))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
 plt.title('Correlation Matrix')
-cor_graph<-plt.show()
-st.write(cor_graph)
+st.pyplot(cor_graph)
 st.markdown("""
 Penjelasan Korelasi
 """)
