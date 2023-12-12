@@ -391,6 +391,12 @@ st.subheader('Kesimpulan'
 ################################
 st.subheader('Saran'
             )
+st.markdown("""
+Berdasarkan hasil dan pembahasan yang diperoleh, adapun saran yang dapat diberikan adalah:
+1.	Menambahkan jenis metrik untuk mengevaluasi model kluster. Hal ini dikarenakan bahwa masih terdapat berbagai jenis metrik yang memiliki masing-masing ketentuannya dalam menentukan kluster terbaik
+2.	Menggunakan metode kluster lainnya seperti PAM, CLARA, dan lain sebagainya. Menambahkan metode lain dapat menambahkan pertimbangan dalam memilih metode terbaik yang sesuai dengan data.
+""")
+
 #################################
 st.markdown("""---""")
 st.caption('CATATAN \n')
