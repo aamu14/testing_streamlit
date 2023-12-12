@@ -402,7 +402,7 @@ st.markdown("""---""")
 st.caption('CATATAN \n'
           'Beberapa package dari R tidak dapat di-import, sehingga saya menggunakan alternatif seperti menyimpan hasil outputnya ke dalam bentuk gambar atau file. \n'
           'Beberapa output grafik dilakukan dengan menggunakan Tableau dikarenakan harus nampilkannya dalam 1 plot secara bersamaan untuk kepentingan analisis. \n'
-          'Streamlit ini saya gunakan dengan tujuan untuk melihat bagaimana penggunaan R dan Python secara bersamaan dalam Streamlit.
+          'Streamlit ini saya gunakan dengan tujuan untuk melihat bagaimana penggunaan R dan Python secara bersamaan dalam Streamlit.'
           )
 
 st.markdown("""---""")
