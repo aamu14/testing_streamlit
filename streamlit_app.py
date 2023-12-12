@@ -39,17 +39,18 @@ Cara kerjanya mirip dengan mengumpulkan barang serupa ke dalam kelompok yang sam
 Misalnya, dalam pengelompokan warna, objek-objek dengan warna yang mirip akan dikelompokkan bersama. Hal yang sama berlaku dalam clustering data, 
 di mana data dengan karakteristik yang mirip dikelompokkan bersama berdasarkan pada atribut-atribut tertentu.**
 """)
+
 st.markdown("""
 **
-Adapun metode clustering yang digunakan ada 2, yaitu Hierarchical Agglomerative Clustering dan Non-Hierarchical Clustering. Metode Hierarchical Clustering dibagi menjadi 3, yaitu:
+Adapun metode clustering yang digunakan ada 2, yaitu Hierarchical Agglomerative Clustering dan Non-Hierarchical Clustering. Metode Hierarchical Clustering dibagi menjadi 3, yaitu:**
 1. Average Linkage
 2. Complete Linkage
 3. Ward's Method \n
 
 Semua metode akan digunakan dan dibandingkan dengan beberapa uji metrik untuk menentukan metode mana yang paling baik digunakan untuk data yang digunakan.
-**
 """)
 
+st.markdown("""---""")
 
 st.markdown("""
             **Data yang digunakan berasal dari publikasi Badan Pusat Statistik (BPS) Kota Bandar Lampung, yaitu Kota Bandar Lampung Dalam Angka Tahun 2022.
