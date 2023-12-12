@@ -32,6 +32,26 @@ Python libraries used:
 
 ''')
 st.markdown("""
+**
+Clustering adalah proses pengelompokan data serupa ke dalam kelompok-kelompok yang lebih kecil berdasarkan pada kesamaan karakteristik tertentu. 
+Tujuannya adalah untuk mengidentifikasi pola atau struktur dalam data yang kompleks. 
+Cara kerjanya mirip dengan mengumpulkan barang serupa ke dalam kelompok yang sama berdasarkan ciri-ciri yang mereka miliki. 
+Misalnya, dalam pengelompokan warna, objek-objek dengan warna yang mirip akan dikelompokkan bersama. Hal yang sama berlaku dalam clustering data, 
+di mana data dengan karakteristik yang mirip dikelompokkan bersama berdasarkan pada atribut-atribut tertentu.**
+""")
+st.markdown("""
+**
+Adapun metode clustering yang digunakan ada 2, yaitu Hierarchical Agglomerative Clustering dan Non-Hierarchical Clustering. Metode Hierarchical Clustering dibagi menjadi 3, yaitu:
+1. Average Linkage
+2. Complete Linkage
+3. Ward's Method \n
+
+Semua metode akan digunakan dan dibandingkan dengan beberapa uji metrik untuk menentukan metode mana yang paling baik digunakan untuk data yang digunakan.
+**
+""")
+
+
+st.markdown("""
             **Data yang digunakan berasal dari publikasi Badan Pusat Statistik (BPS) Kota Bandar Lampung, yaitu Kota Bandar Lampung Dalam Angka Tahun 2022.
             Data yang digunakan adalah data tahun 2021 yang terdiri dari data kecamatan, data luas daerah, dan data kependidikan. Adapun data kependidikan tersebut terbagi menjadi 3, yaitu:**  
             1. Jumlah Guru Tingkat TK hingga SMA sederajat
@@ -402,7 +422,7 @@ st.markdown("""---""")
 st.caption('CATATAN')
 st.caption('Beberapa package dari R tidak dapat di-import, sehingga saya menggunakan alternatif seperti menyimpan hasil outputnya ke dalam bentuk gambar atau file.')
 st.caption('Beberapa output grafik dilakukan dengan menggunakan Tableau dikarenakan harus nampilkannya dalam 1 plot secara bersamaan untuk kepentingan analisis.')
-st.caption('Streamlit ini saya gunakan dengan tujuan untuk melihat bagaimana penggunaan R dan Python secara bersamaan dalam Streamlit.'
+st.caption('Streamlit ini digunakan dengan tujuan untuk melihat bagaimana penggunaan R dan Python secara bersamaan dalam Streamlit.'
           )
 
 st.markdown("""---""")
