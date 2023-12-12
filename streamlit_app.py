@@ -315,7 +315,9 @@ with col12:
     # Read the Excel file into a DataFrame
     data6 = pd.read_csv("dunn.csv")
     st.dataframe(data6, height=300)
-st.markdown(""" Penjelasan Terpilih complete linkage dengan 3 kluster""")
+st.markdown("""
+Dari tabel di atas dapat dilihat bahwa average linkage dan complete linkage memenuhi dua kriteria metrik dan menjadi model terbaik. Tetapi karena nilai dari average linkage dan complete linkage memiliki nilai yang sama, maka akan dipilih salah satu metode yang akan dilanjutkan untuk dilihat karakteristik dari klusternya, yaitu metode complete linkage dengan tiga kluster.
+""")
 st.markdown("""---""")
 #show characteristic
 st.subheader('Karakteristik Masing-Masing Kluster')
