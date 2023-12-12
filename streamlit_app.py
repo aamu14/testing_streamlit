@@ -308,7 +308,14 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
 plt.title('Correlation Matrix')
 st.pyplot(cor_graph)
 st.markdown("""
-Penjelasan Korelasi
+1. Luas Daerah (km^2) dan Kepadatan Penduduk per km^2:  Korelasi negatif yang kuat (-0.776725) menunjukkan bahwa semakin besar luas daerah, kepadatan penduduknya cenderung lebih rendah, dan sebaliknya.
+2. Pendidikan dan Luas Daerah:  Tingkat TK/RA memiliki korelasi positif yang cukup kuat dengan luas daerah (0.652824), menandakan bahwa dengan bertambahnya luas daerah, tingkat TK/RA cenderung naik.
+Korelasi positif yang lebih rendah terlihat pada tingkat SD/MI (0.392130), tingkat SMP/MTs (0.366869), dan tingkat SMA/SMK/MA (0.247176).
+3. Pendidikan dan Kepadatan Penduduk:  Tingkat pendidikan (TK/RA, SD/MI, SMP/MTs, SMA/SMK/MA) memiliki korelasi negatif dengan kepadatan penduduk. Ini menunjukkan bahwa semakin padat penduduknya, tingkat pendidikan cenderung lebih rendah.
+4. Hubungan antara Jumlah Murid dan Tingkat Pendidikan:  Ada korelasi positif antara jumlah murid pada tingkat pendidikan (TK/RA, SD/MI, SMP/MTs, SMA/SMK/MA). Semakin tinggi tingkat pendidikan, jumlah muridnya cenderung lebih tinggi.
+Tingkat TK/RA memiliki korelasi paling kuat dengan jumlah murid pada tingkat tersebut (0.571954).
+5. Hubungan antara Jumlah Guru dan Tingkat Pendidikan:  Korelasi positif juga terlihat antara jumlah guru dengan tingkat pendidikan, menunjukkan semakin tinggi tingkat pendidikan, jumlah guru cenderung lebih tinggi.
+6. Hubungan antara Jumlah Murid dan Jumlah Guru:  Korelasi antara jumlah murid dengan jumlah guru pada berbagai tingkat pendidikan juga tampak. Tingkat pendidikan yang lebih tinggi cenderung memiliki hubungan yang lebih tinggi antara jumlah murid dan guru.
 """)
 # Horizontal Divider
 st.markdown("""---""")
