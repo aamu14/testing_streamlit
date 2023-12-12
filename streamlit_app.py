@@ -399,10 +399,10 @@ Berdasarkan hasil dan pembahasan yang diperoleh, adapun saran yang dapat diberik
 
 #################################
 st.markdown("""---""")
-st.caption('CATATAN \n')
+st.caption('CATATAN \n'
+          'Beberapa package dari R tidak dapat di-import, sehingga saya menggunakan alternatif seperti menyimpan hasil outputnya ke dalam bentuk gambar atau file. \n'
+          'Beberapa output grafik dilakukan dengan menggunakan Tableau dikarenakan harus nampilkannya dalam 1 plot secara bersamaan untuk kepentingan analisis. \n'
+          'Streamlit ini saya gunakan dengan tujuan untuk melihat bagaimana penggunaan R dan Python secara bersamaan dalam Streamlit.
+          )
+
 st.markdown("""---""")
-st.caption('SARAN UNTUK PENELITIAN LEBIH LANJUT  \n'
-               'Perlu diingat bahwa data yang digunakan adalah data posisi pemberian kredit berdasarkan jenis '
-               'penggunaan dalam skala nasional.  \n'
-               'Jika menggunakan data dalam skala provinsi, akan sangat memungkinkan pada beberapa provinsi,  \n'
-               'tidak semua jenis penggunaan kredit berpengaruh secara positif terhadap pertumbuhan PDRB.')
