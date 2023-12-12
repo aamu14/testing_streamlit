@@ -292,7 +292,9 @@ else:
 st.header("""
 Observasi Korelasi Antar Variabel
 """)
-
+st.markdown("""
+Analisis korelasi (correlation) dilakukan untuk melihat bagaimana hubungan antar variabel satu sama lain. Perlu dicatat bahwa korelasi tidak sama dengan kausalitas (causalty), sehingga tidak dapat secara langsung apakah satu variabel menjadi penyebab bagi variabel lainnya.
+""")
 # Read the CSV file into a Pandas DataFrame
 df = pd.read_csv('datatest.csv')
 
