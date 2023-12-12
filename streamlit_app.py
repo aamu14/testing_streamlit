@@ -437,10 +437,10 @@ Berdasarkan hasil dan pembahasan yang diperoleh, adapun saran yang dapat diberik
 #################################
 st.markdown("""---""")
 st.caption('CATATAN')
-st.caption('Beberapa package dari R tidak dapat di-import, sehingga saya menggunakan alternatif seperti menyimpan hasil outputnya ke dalam bentuk gambar atau file.')
-st.caption('Beberapa output grafik dilakukan dengan menggunakan Tableau dikarenakan harus nampilkannya dalam 1 plot secara bersamaan untuk kepentingan analisis.')
-st.caption('Streamlit ini digunakan dengan tujuan untuk melihat bagaimana penggunaan R dan Python secara bersamaan dalam Streamlit.')
-st.caption('Beberapa penyesuaian agar mempermudah penggunaan streamlit ini.'
+st.caption('1. Beberapa package dari R tidak dapat di-import, sehingga saya menggunakan alternatif seperti menyimpan hasil outputnya ke dalam bentuk gambar atau file.')
+st.caption('2. Beberapa output grafik dilakukan dengan menggunakan Tableau dikarenakan harus nampilkannya dalam 1 plot secara bersamaan untuk kepentingan analisis.')
+st.caption('3. Streamlit ini digunakan dengan tujuan untuk melihat bagaimana penggunaan R dan Python secara bersamaan dalam Streamlit.')
+st.caption('4. Lalu terdapat beberapa penyesuaian agar mempermudah penggunaan streamlit ini.'
           )
 
 st.markdown("""---""")
