@@ -333,16 +333,15 @@ st.subheader('Karakteristik Masing-Masing Kluster')
 data7 = pd.read_csv("characteristic.csv")
 st.dataframe(data7, height=500)
 st.markdown("""
-    Tabel tersebut mewakili bagaimana karakteristik dari setiap kluster. 
-    Metode terbaik yang dipilih adalah metode hierarchical (agglomerative) clustering khususnya pada metode complete linkage dengan tiga kluster. Hal ini dapat disebabkan karena metode lainnya tidak memenuhi kriteria lebih dari satu metrik.
+Tabel ini mencerminkan karakteristik dari masing-masing kluster. Metode yang terpilih adalah metode hierarchical (agglomerative) clustering, terutama menggunakan metode complete linkage untuk membentuk tiga kluster. Pemilihan ini didasarkan pada kriteria yang tidak terpenuhi oleh metode lain dalam lebih dari satu metrik evaluasi.
 
-Kluster 1 memiliki luas daerah yang tidak terlalu besar dan tidak terlalu kecil, kepadatan penduduknya  tertinggi, variabel (jumlah sekolah, jumlah guru, dan jumlah murid) di tingkat TK/RA dan SD/MI berada di antara kluster 2 dan 3, sedangkan variabel (jumlah sekolah, jumlah guru, dan jumlah murid) di tingkat SMP/MTs dan SMA/SMK/MA memiliki nilai yang paling sedikit. Hal ini menandakan bahwa kluster 1 adalah daerah yang padat dengan penduduk yang cukup fokus terhadap kebutuhan pendidikan (khususnya di tingkat TK/RA dan SD/MI) dan tidak terlalu fokus pada tingkat yang lebih tinggi. 
+Kluster 1 memiliki luas daerah yang moderat, kepadatan penduduk tinggi, dan variabel jumlah sekolah, guru, dan murid di tingkat TK/RA dan SD/MI berada di antara kluster 2 dan 3. Namun, variabel yang sama di tingkat SMP/MTs dan SMA/SMK/MA memiliki nilai paling rendah, menandakan fokus pendidikan yang lebih rendah di tingkat ini.
 
-Kluster 2 memiliki luas daerah terkecil, kepadatan penduduk yang cukup besar, variabel (jumlah sekolah, jumlah guru, dan jumlah murid) di tingkat TK/RA dan SD/MI memiliki nilai yang terkecil, variabel jumlah sekolah di tingkat SMP/MTs dan SMA/SMK/MA memiliki nilai yang cukup besar, lalu jumlah murid dan guru di tingkat SMP/MTs dan SMA/SMK/MA memiliki nilai tertinggi. Jika membandingkan besarnya luas daerah dengan variabel pendidikan yang ada, maka hal ini menandakan bahwa pada kluster ini fokus pada pendidikan (khususnya di tingkat SMP/MTs dan SMA/SMK/MA).
+Kluster 2 memiliki luas daerah terkecil, kepadatan penduduk cukup tinggi, dan nilai jumlah sekolah di tingkat SMP/MTs dan SMA/SMK/MA tinggi, sementara jumlah murid dan guru di tingkat yang sama sangat tinggi. Ini menandakan fokus yang lebih besar pada tingkat pendidikan lanjutan di kluster ini.
 
-Kluster 3 adalah kluster yang memiliki luas daerah yang terbesar, tetapi kepadatan penduduk yang sangat kecil. Hal ini menandakan bahwa daerah pada kluster ini memiliki sedikit wilayah yang dihuni oleh masyarakat. Selain itu, variabel pendidikan pada kluster ini memiliki nilai yang tinggi dibandingkan dengan kluster 1 dan 2. Hal ini menjadikan kluster 3 adalah daerah yang sangat fokus pada pendidikan.
+Kluster 3 memiliki luas daerah terbesar dengan kepadatan penduduk yang rendah. Daerah dalam kluster ini tampaknya lebih fokus pada pendidikan dengan nilai variabel pendidikan yang tinggi di semua tingkatan.
 
-Lalu dapat diperhatikan bahwa terdapat beberapa kecamatan yang seharusnya berada pada kluster dengan daerah yang terbesar, tetapi terletak pada kluster yang berbeda. Hal ini disebabkan karena analisis kluster dilakukan dengan menggunakan karakteristik secara umum, tidak untuk mendefinisikan satu daerah saja. Selain itu, hal ini juga dapat disebabkan karena nilai pada pengecekan masing-masing metrik yang tidak terlalu besar, sehingga masih terdapat kemungkinan hasilnya terdapat bias.
+Namun, beberapa kecamatan mungkin terletak di kluster yang tidak sepenuhnya mencerminkan luas wilayahnya karena analisis kluster dilakukan secara umum untuk beberapa karakteristik, bukan untuk mendefinisikan satu daerah secara eksklusif. Disamping itu, kemungkinan hasil yang berbeda bisa disebabkan oleh relatif kecilnya perbedaan nilai dalam pengecekan metrik yang memungkinkan adanya bias dalam hasil.
 """)
 #dendogram
 st.subheader('Plot Cluster Dendogram'
