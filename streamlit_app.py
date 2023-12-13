@@ -10,7 +10,7 @@ st.set_page_config(
     page_title="Project Intern BPS Kota Bandar Lampung",
     layout="wide", page_icon="📈"
 )
-st.header('🎈 R x Python Streamlit App')
+st.header('🐍®️ R x Python Streamlit App 🐍®️')
 st.sidebar.markdown('''
 # About
 This project is using the combination of R, Python. Some graphs are created with Tableau. The consideration will be written on the end of this project.
