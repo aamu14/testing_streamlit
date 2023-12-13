@@ -51,12 +51,9 @@ Semua metode akan digunakan dan dibandingkan dengan beberapa uji metrik untuk me
 
 st.markdown("""---""")
 url = "https://bit.ly/publikasibps2023"
-st.write("check out this [link](%s)" % url)
-st.markdown("check out this [link](%s)" % url)
-
 st.markdown("""
-            **Data yang digunakan berasal dari publikasi Badan Pusat Statistik (BPS) Kota Bandar Lampung, yaitu Kota Bandar Lampung Dalam Angka Tahun 2023 (%s).""" % url)
-st.markdown("""Data yang digunakan adalah data tahun 2022 yang terdiri dari data kecamatan, data luas daerah, dan data kependidikan. Adapun data kependidikan tersebut terbagi menjadi 3, yaitu:**  
+            **Data yang digunakan berasal dari publikasi Badan Pusat Statistik (BPS) Kota Bandar Lampung, yaitu Kota Bandar Lampung Dalam Angka Tahun 2023 (%s).**""" % url)
+st.markdown("""Data yang digunakan adalah data tahun 2022 yang terdiri dari data kecamatan, data luas daerah, dan data kependidikan. Adapun data kependidikan tersebut terbagi menjadi 3, yaitu:  
             1. Jumlah Guru Tingkat TK hingga SMA sederajat
             2. Jumlah Murid Tingkat TK hingga SMA sederajat
             3. Jumlah Sekolah Tingkat TK hinga SMA sederajat
