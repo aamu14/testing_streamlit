@@ -1,2 +1,2 @@
 # testing_streamlit
-testing R code into streamlit
+testing R and Python in streamlit
