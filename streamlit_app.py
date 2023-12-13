@@ -57,6 +57,7 @@ st.markdown("""
             2. Jumlah Murid Tingkat TK hingga SMA sederajat
             3. Jumlah Sekolah Tingkat TK hinga SMA sederajat
             """)
+
 # Read the Excel file into a DataFrame
 data = pd.read_csv("datatest.csv")
 st.dataframe(data)
@@ -349,7 +350,7 @@ st.markdown("""
             Kriteria ini akan menentukan hasil akhir dari pengujian masing-masing metode clustering. Adapun hasilnya dapat dilihat pada tabel di bawah ini.
 """)
 
-with st.expander('See code'):
+with st.expander('See R code'):
   code1 = '''library(readxl, quietly = T)
 library(cluster, quietly = T)
 suppressMessages(library("factoextra"))
@@ -559,7 +560,7 @@ Dari tabel di atas dapat dilihat bahwa average linkage dan complete linkage meme
 st.markdown("""---""")
 #show characteristic
 st.subheader('Karakteristik Masing-Masing Kluster')
-with st.expander('See code'):
+with st.expander('See R code'):
   code2 = '''#show the characteristic of complete linkage
 t<-aggregate(df_real[,-c(1,1)],list(clusterCut_3),mean)
 
@@ -592,7 +593,7 @@ Namun, beberapa kecamatan mungkin terletak di kluster yang tidak sepenuhnya menc
 #dendogram
 st.subheader('Plot Cluster Dendogram'
             )
-with st.expander('See code'):
+with st.expander('See R code'):
   code3 = '''#show dendogram
 png("cluster_dend.png", width = 800, height = 600)  # Specify file path and dimensions
 plot(hc.c, labels = df_real$Kecamatan, cex = 1.5)
