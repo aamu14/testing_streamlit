@@ -6,9 +6,10 @@ library(knitr, quietly = T)
 suppressMessages(library(dplyr))
 suppressMessages(library(reshape2))
 
-# Get content into a data frame
-df_real <- read.csv("datatest.csv",
-                header = TRUE, sep = ",")
+script_dir <- dirname(sys.frame(1)$ofile)
+setwd(script_dir)
+
+df_real <- read.csv("datatest.csv", header = TRUE, sep = ",")
 df <- df_real[,-1]
 # Scale the data
 z <- scale(df)
