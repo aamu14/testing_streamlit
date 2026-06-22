@@ -1,6 +1,5 @@
 library(readxl, quietly = T)
 library(cluster, quietly = T)
-suppressMessages(library("factoextra"))
 library(fpc, quietly = T)
 library(knitr, quietly = T)
 suppressMessages(library(dplyr))
