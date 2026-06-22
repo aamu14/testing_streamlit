@@ -522,39 +522,74 @@ calinhara_df_sorted <- df_calinski %>% arrange(desc(Calinski_value))
 # Saving the dataframe into a CSV file named 'calinhara.csv'
 write.csv(calinhara_df_sorted, file = "calinhara.csv", row.names = FALSE)")
   '''
-  st.code(code1, language='R')
-process1 = subprocess.Popen(["Rscript", "sil&calins.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-result1 = process1.communicate()
+  # ====================== TAMPILKAN KODE R ======================
+st.code(code1, language='R')   # tetap sama
+
+# ====================== JALANKAN R SCRIPT (INI YANG UTAMA DIUBAH) ======================
+process1 = subprocess.Popen(
+    ["Rscript", "sil&calins.R"], 
+    stdout=subprocess.PIPE, 
+    stderr=subprocess.PIPE, 
+    text=True,
+    cwd=os.getcwd(),           # ### DIUBAH - Penting untuk Streamlit Cloud
+    env=os.environ.copy()      # ### DIUBAH
+)
+
+stdout, stderr = process1.communicate(timeout=40)   # ### DIUBAH
+
+# Tampilkan output R (ini baru, sangat membantu debugging)
+with st.expander("📋 R Output & Error"):
+    if stdout:
+        st.code(stdout)
+    if stderr:
+        st.error(stderr)
+
+if process1.returncode != 0:
+    st.error(f"❌ R script gagal! Return code: {process1.returncode}")
+    st.stop()   # ### DIUBAH - Stop kalau error
+
+# ====================== CEK FILE SEBELUM DIBACA (BARU) ======================
+with st.expander("✅ Status File CSV"):
+    for file in ["silhouette.csv", "calinhara.csv", "dbi.csv", "dunn.csv"]:
+        if os.path.exists(file):
+            st.success(f"✅ {file} ditemukan")
+        else:
+            st.error(f"❌ {file} TIDAK ditemukan")
+
+# ====================== TAMPILKAN DATAFRAME (DITAMBAH PENGECEKAN) ======================
 col9, col10, col11, col12 = st.columns(4)
-# Displaying the saved image in Streamlit
+
 with col9:
-    st.markdown("""
-            Silhouette Score
-            """)
-    # Read the Excel file into a DataFrame
-    data4 = pd.read_csv("silhouette.csv")
-    st.dataframe(data4, height=300, width=600)
+    st.markdown("**Silhouette Score**")
+    if os.path.exists("silhouette.csv"):
+        data4 = pd.read_csv("silhouette.csv")
+        st.dataframe(data4, height=300, width=600)
+    else:
+        st.error("silhouette.csv tidak ditemukan")
+
 with col10:
-    st.markdown("""
-        Calinski-Harabasz Index
-        """)
-    # Read the Excel file into a DataFrame
-    data3 = pd.read_csv("calinhara.csv")
-    st.dataframe(data3, height=300)
+    st.markdown("**Calinski-Harabasz Index**")
+    if os.path.exists("calinhara.csv"):
+        data3 = pd.read_csv("calinhara.csv")
+        st.dataframe(data3, height=300)
+    else:
+        st.error("calinhara.csv tidak ditemukan")
+
 with col11:
-    st.markdown("""
-        Davies-Bouldin Index
-        """)
-    # Read the Excel file into a DataFrame
-    data5 = pd.read_csv("dbi.csv")
-    st.dataframe(data5, height=300)
+    st.markdown("**Davies-Bouldin Index**")
+    if os.path.exists("dbi.csv"):
+        data5 = pd.read_csv("dbi.csv")
+        st.dataframe(data5, height=300)
+    else:
+        st.error("dbi.csv tidak ditemukan")
+
 with col12:
-    st.markdown("""
-            Dunn Index
-            """)
-    # Read the Excel file into a DataFrame
-    data6 = pd.read_csv("dunn.csv")
-    st.dataframe(data6, height=300)
+    st.markdown("**Dunn Index**")
+    if os.path.exists("dunn.csv"):
+        data6 = pd.read_csv("dunn.csv")
+        st.dataframe(data6, height=300)
+    else:
+        st.error("dunn.csv tidak ditemukan")
 st.markdown("""
 Dari tabel di atas dapat dilihat bahwa average linkage dan complete linkage memenuhi dua kriteria metrik dan menjadi model terbaik. Tetapi karena nilai dari average linkage dan complete linkage memiliki nilai yang sama, maka akan dipilih salah satu metode yang akan dilanjutkan untuk dilihat karakteristik dari klusternya, yaitu metode complete linkage dengan tiga kluster.
 """)
