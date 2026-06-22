@@ -6,8 +6,16 @@ library(knitr, quietly = T)
 suppressMessages(library(dplyr))
 suppressMessages(library(reshape2))
 
+# === TAMBAHKAN DI BARIS PALING ATAS ===
+cat("=== R SCRIPT STARTED ===\n")
+cat("Working Directory:", getwd(), "\n")
+print(list.files())   # lihat file apa saja yang ada di folder
+cat("=======================\n")
+
 script_dir <- dirname(sys.frame(1)$ofile)
 setwd(script_dir)
+
+
 
 df_real <- read.csv("datatest.csv", header = TRUE, sep = ",")
 df <- df_real[,-1]
